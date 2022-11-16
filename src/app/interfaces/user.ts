@@ -3,6 +3,6 @@ export interface User {
     username: string,
     name: string,
     email: string,
-    friends: null,
-    fav_games: null
+    friends: number[],
+    fav_games: number[]
 }

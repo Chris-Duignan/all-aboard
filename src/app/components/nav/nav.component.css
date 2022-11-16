@@ -6,3 +6,15 @@ nav {
     background-color: #231942;
     height: 5%;
 }
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    color: #FFEAEC;
+    padding: 5px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}

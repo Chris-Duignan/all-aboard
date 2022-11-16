@@ -17,6 +17,7 @@ export class EventPageComponent implements OnInit {
 
   getEvents(): void {
     this.eventsService.getEvents().subscribe((events) => {
+      console.log(events)
       this.events = events;
     });
   }
