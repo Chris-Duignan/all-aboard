@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
+import { GamesPageComponent } from './components/games-page/games-page.component';
+import { EventFormComponent } from './components/event-form/event-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { UserPageComponent } from './components/user-page/user-page.component';
     NavComponent,
     EventCardComponent,
     UserPageComponent,
+    GamesPageComponent,
+    EventFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

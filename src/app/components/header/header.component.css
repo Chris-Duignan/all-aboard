@@ -1,8 +1,19 @@
 button {
     border: 0;
     outline: 0;
-    background-color: darkblue;
-    color: white;
+    background-color: #0D5C63;
+    color: #FFEAEC;
     padding: 5px;
     border-radius: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #FFEAEC;
+}
+
+h1 {
+    color: #231942;
 }
