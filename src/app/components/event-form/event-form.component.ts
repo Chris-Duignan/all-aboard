@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Meet } from  "../../classes/event";
+import { EventsService } from 'src/app/services/events/events.service';
+import { Meet } from '../../classes/event';
 
 @Component({
   selector: 'app-event-form',
@@ -8,10 +9,47 @@ import { Meet } from  "../../classes/event";
 })
 export class EventFormComponent {
 
-  model = new Meet("", "12.35", "34.1", "Manchester", "", "", 2 /* This is the user id, we need this from auth*/, 0, true, false, "")
+  constructor(private eventsService: EventsService) {}
 
   submitted = false;
+  model = new Meet(
+    '',
+    '12.35',
+    '34.1',
+    'Manchester',
+    '',
+    '',
+    2 /* This is the user id, we need this from auth*/,
+    0,
+    true,
+    false,
+    ''
+  );
 
-  onSubmit() { this.submitted = true; }
+  newMeet() {
+    this.model = new Meet(
+      '',
+      '12.35',
+      '34.1',
+      'Manchester',
+      '',
+      '',
+      2 /* This is the user id, we need this from auth*/,
+      0,
+      true,
+      false,
+      ''
+    );
+  }
+
+  onSubmit(model: any) {
+    this.submitted = true;
+    this.postMeet(model);
+  }
+  
+  postMeet(model: any):void {
+    this.eventsService.postEvent(model)
+  }
+
 
 }
