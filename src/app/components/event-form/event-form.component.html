@@ -1,101 +1,108 @@
-<section [hidden]="submitted">
-  <form (ngSubmit)="onSubmit(model)" #eventForm="ngForm">
-    <img
-      style="width: 200px; border: 1px solid black"
-      src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
-    />
-    <p>-- Location map to go here --</p>
-    <label for="title">Event title: </label>
-    <input
-      type="text"
-      id="title"
-      required
-      [(ngModel)]="model.title"
-      name="title"
-    />
-    <br />
-    <label for="description">Write a brief description of your event</label>
-    <textarea
-      id="description"
-      required
-      [(ngModel)]="model.description"
-      name="description"
-    ></textarea>
-    <br />
-    <label for="date">Date: </label>
-    <input
-      type="date"
-      id="date"
-      required
-      [(ngModel)]="model.date"
-      name="date"
-    />
+<section>
+  <section [hidden]="submitted">
+    <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
+      <img
+        style="width: 200px; border: 1px solid black"
+        src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
+      />
+      <p>-- Location map to go here --</p>
+      <label for="title">Event title: </label>
+      <input
+        type="text"
+        id="title"
+        required
+        [(ngModel)]="model.title"
+        name="title"
+      />
+      <br />
+      <label for="description">Write a brief description of your event</label>
+      <textarea
+        id="description"
+        required
+        [(ngModel)]="model.description"
+        name="description"
+      ></textarea>
+      <br />
+      <label for="date">Date: </label>
+      <input
+        type="date"
+        id="date"
+        required
+        [(ngModel)]="model.date"
+        name="date"
+      />
 
-    <br />
-    <label for="start_time">Time:</label>
-    <input
-      type="time"
-      id="time"
-      required
-      [(ngModel)]="model.start_time"
-      name="start_time"
-    />
+      <br />
+      <label for="start_time">Time:</label>
+      <input
+        type="time"
+        id="time"
+        required
+        [(ngModel)]="model.start_time"
+        name="start_time"
+      />
 
-    <br />
-    <fieldset>
-      <legend>Willing to teach</legend>
-      <label>
-        Yes
-        <input
-          type="radio"
-          id="yes"
-          value="true"
-          name="willing_to_teach"
-          required
-          [(ngModel)]="model.willing_to_teach"
-        />
-      </label>
-      <label>
-        No
-        <input
-          type="radio"
-          id="no"
-          value="false"
-          name="willing_to_teach"
-          required
-          [(ngModel)]="model.willing_to_teach"
-        />
-      </label>
-    </fieldset>
-    <fieldset>
-      <legend>Public/Private event</legend>
-      <label>
-        Public
-        <input
-          type="radio"
-          id="public"
-          value="true"
-          name="visibility"
-          required
-          [(ngModel)]="model.visibility"
-        />
-      </label>
-      <label>
-        Private
-        <input
-          type="radio"
-          id="private"
-          value="false"
-          name="visibility"
-          required
-          [(ngModel)]="model.visibility"
-        />
-      </label>
-    </fieldset>
-    <br /><br />
-    <button type="submit" [disabled]="!eventForm.form.valid">
-      Add New Event
-    </button>
-    <button type="button" (click)="newMeet(); eventForm.reset()">Reset</button>
-  </form>
+      <br />
+      <fieldset>
+        <legend>Willing to teach</legend>
+        <label>
+          Yes
+          <input
+            type="radio"
+            id="yes"
+            value="true"
+            name="willing_to_teach"
+            required
+            [(ngModel)]="model.willing_to_teach"
+          />
+        </label>
+        <label>
+          No
+          <input
+            type="radio"
+            id="no"
+            value="false"
+            name="willing_to_teach"
+            required
+            [(ngModel)]="model.willing_to_teach"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Public/Private event</legend>
+        <label>
+          Public
+          <input
+            type="radio"
+            id="public"
+            value="true"
+            name="visibility"
+            required
+            [(ngModel)]="model.visibility"
+          />
+        </label>
+        <label>
+          Private
+          <input
+            type="radio"
+            id="private"
+            value="false"
+            name="visibility"
+            required
+            [(ngModel)]="model.visibility"
+          />
+        </label>
+      </fieldset>
+      <br /><br />
+      <button type="submit" [disabled]="!eventForm.form.valid">
+        Add New Event
+      </button>
+      <button type="button" (click)="newMeet(); eventForm.reset()">
+        Reset
+      </button>
+    </form>
+  </section>
+  <section [hidden]="!submitted">
+    <h2>Your Event Has Been Posted!</h2>
+  </section>
 </section>

@@ -12,6 +12,7 @@ export class EventFormComponent {
   constructor(private eventsService: EventsService) {}
 
   submitted = false;
+  
   model = new Meet(
     '',
     '12.35',
@@ -42,14 +43,9 @@ export class EventFormComponent {
     );
   }
 
-  onSubmit(model: any) {
-    this.submitted = true;
-    this.postMeet(model);
-  }
   
   postMeet(model: any):void {
-    this.eventsService.postEvent(model)
+    this.eventsService.postEvent(model).subscribe()
+    this.submitted = true;
   }
-
-
 }
