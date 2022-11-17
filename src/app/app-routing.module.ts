@@ -7,7 +7,7 @@ import { UserPageComponent } from './components/user-page/user-page.component';
 const routes: Routes = [
   { path: '', component: EventPageComponent },
   { path: 'user', component: UserPageComponent },
-  {path: "createEvent", component: EventFormComponent}
+  { path: 'createEvent', component: EventFormComponent },
 ];
 
 @NgModule({

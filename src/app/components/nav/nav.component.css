@@ -1,4 +1,6 @@
 nav {
+    display: flex;
+    flex-direction: row;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -13,8 +15,8 @@ button {
     background-color: inherit;
     color: #FFEAEC;
     padding: 5px;
-    border-radius: 5px;
-    height: 100%;
-    width: 100%;
     font-size: 1rem;
+    flex-grow: 1;
+    height: 100%;
+    border-right: 1px solid #FFEAEC;
 }
