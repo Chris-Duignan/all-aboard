@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../../services/events/events.service';
+import { Meet } from 'src/app/classes/event';
+import { formatDate } from '../../../utils/formatDate';
 
 @Component({
   selector: 'app-event-page',
@@ -7,7 +9,7 @@ import { EventsService } from '../../services/events/events.service';
   styleUrls: ['./event-page.component.css'],
 })
 export class EventPageComponent implements OnInit {
-  events: Event[] = [];
+  meets: Meet[] = [];
 
   constructor(private eventsService: EventsService) {}
 
@@ -16,9 +18,11 @@ export class EventPageComponent implements OnInit {
   }
 
   getEvents(): void {
-    this.eventsService.getEvents().subscribe((events) => {
-      console.log(events)
-      this.events = events;
+    this.eventsService.getEvents().subscribe((meets) => {
+      this.meets = meets;
+      meets.map((meet) => {
+        meet.date = formatDate(meet.date);
+      });
     });
   }
 }

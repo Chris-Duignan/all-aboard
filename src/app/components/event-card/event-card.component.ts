@@ -1,5 +1,7 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-event-card',
@@ -8,7 +10,8 @@ import { Input } from '@angular/core';
 })
 export class EventCardComponent implements OnInit {
 
-  @Input() event: any;
+  @Input() meet: any;
+
   constructor() { }
 
   ngOnInit(): void {

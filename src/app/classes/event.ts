@@ -1,4 +1,4 @@
-export class Event {
+export class Meet {
 
     constructor(
         public title: string,

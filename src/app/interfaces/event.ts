@@ -1,8 +1,8 @@
-export interface Events {
-    events: Event[];
+export interface Meets {
+    meets: Meet[];
 }
 
-export interface Event {
+export interface Meet {
     event_id: number,
     title: string,
     latitude: string,
