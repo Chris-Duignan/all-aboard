@@ -15,6 +15,7 @@ import { GamesPageComponent } from './components/games-page/games-page.component
 import { EventFormComponent } from './components/event-form/event-form.component';
 import { MyEventsComponent } from './components/my-events/my-events.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     EventFormComponent,
     MyEventsComponent,
     LoadingComponent,
+    SignInComponent,
   ],
   imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
