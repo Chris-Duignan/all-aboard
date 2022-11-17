@@ -7,7 +7,7 @@ export class Meet {
         public area: string,
         public date: string,
         public start_time: string,
-        public organiser: number,
+        public organiser: any,
         public duration: number,
         public visibility: boolean,
         public willing_to_teach: boolean,

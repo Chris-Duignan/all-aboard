@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EventFormComponent } from './components/event-form/event-form.component';
 import { EventPageComponent } from './components/event-page/event-page.component';
+import { MyEventsComponent } from './components/my-events/my-events.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
 
 const routes: Routes = [
   { path: '', component: EventPageComponent },
   { path: 'user', component: UserPageComponent },
+  { path: 'user/myEvents', component: MyEventsComponent },
   { path: 'createEvent', component: EventFormComponent },
 ];
 

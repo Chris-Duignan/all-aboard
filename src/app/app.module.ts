@@ -13,6 +13,8 @@ import { EventCardComponent } from './components/event-card/event-card.component
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { GamesPageComponent } from './components/games-page/games-page.component';
 import { EventFormComponent } from './components/event-form/event-form.component';
+import { MyEventsComponent } from './components/my-events/my-events.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { EventFormComponent } from './components/event-form/event-form.component
     UserPageComponent,
     GamesPageComponent,
     EventFormComponent,
+    MyEventsComponent,
+    LoadingComponent,
   ],
   imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],

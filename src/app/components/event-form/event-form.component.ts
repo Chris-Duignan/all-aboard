@@ -43,7 +43,6 @@ export class EventFormComponent {
     );
   }
 
-  
   postMeet(model: any):void {
     this.eventsService.postEvent(model).subscribe()
     this.submitted = true;

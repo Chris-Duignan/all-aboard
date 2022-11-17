@@ -1,13 +1,18 @@
 <main>
-  <h2>Welcome back {{ user.name }}</h2>
-  <p>{{ user.email }}</p>
-  <p>Your local area</p>
-  <br />
-  <h3>My Games</h3>
-  <br />
-  <ul></ul>
-  <br />
-  <h3>My friends</h3>
-  <br />
-  <ul></ul>
+  <section>
+    <app-loading *ngIf="loading"></app-loading>
+  </section>
+  <section *ngIf="!loading">
+    <h2>Welcome back {{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+    <p>Your local area</p>
+    <br />
+    <h3>My Games</h3>
+    <br />
+    <ul></ul>
+    <br />
+    <h3>My friends</h3>
+    <br />
+    <ul></ul>
+  </section>
 </main>

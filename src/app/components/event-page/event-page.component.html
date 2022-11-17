@@ -1,7 +1,10 @@
 <main>
     <h2>Events near you</h2>
     <ul class="list">
-        <app-event-card *ngFor="let meet of meets" [meet]="meet">
-        </app-event-card>
+        <app-loading *ngIf="loading"></app-loading>
+        <div *ngIf="!loading">
+            <app-event-card *ngFor="let meet of meets" [meet]="meet">
+            </app-event-card>
+        </div>
     </ul>
 </main>

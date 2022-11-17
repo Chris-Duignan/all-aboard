@@ -10,6 +10,7 @@ import { UsersService } from 'src/app/services/users/users.service';
 export class UserPageComponent implements OnInit {
 
   user = <User>{}
+  loading: boolean = true;
 
   constructor(private usersService: UsersService) { }
   
@@ -18,9 +19,10 @@ export class UserPageComponent implements OnInit {
   }
 
   getUser(id: number): void {
+    this.loading = true;
     this.usersService.getUser(id).subscribe((user) => {
-      console.log(user)
       this.user = user;
+      this.loading = false;
     })
   }
 }
