@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "all-aboard-60792": {
+      "hosting": {
+        "all-aboard": [
+          "all-aboard-60792"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "all-aboard-60792"
+  }
+}
