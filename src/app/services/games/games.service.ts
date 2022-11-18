@@ -23,4 +23,12 @@ export class GamesService {
       })
     );
   }
+
+  getGame(game_id: number): Observable<Game> {
+    return this.http.get<Game>(this.gamesUrl + '/' + game_id).pipe(
+      map((response: any) => {
+        return response.game;
+      })
+    );
+  }
 }

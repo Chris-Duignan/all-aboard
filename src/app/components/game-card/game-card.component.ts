@@ -9,6 +9,7 @@ export class GameCardComponent implements OnInit {
   @Input() game: any;
   formattedName = '';
   shortDescription = '';
+  gamePageLink = '';
 
   constructor() {}
 
@@ -16,9 +17,14 @@ export class GameCardComponent implements OnInit {
     this.formattedName = this.game.name
       .split('-')
       .map((word: string) => {
-        return word[0].toUpperCase() + word.slice(1);
+        if (word[0]) {
+          return word[0].toUpperCase() + word.slice(1);
+        } else {
+          return '-';
+        }
       })
       .join(' ');
     this.shortDescription = this.game.description.split('.')[0];
+    this.gamePageLink = `/games/${this.game.game_id}`;
   }
 }

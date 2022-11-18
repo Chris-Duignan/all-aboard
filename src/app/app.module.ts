@@ -23,7 +23,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 //felix added -> in termainal installed 'ng add @angular/material'
 import { MatIconModule } from '@angular/material/icon';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { GameCardComponent } from './components/game-card/game-card.component'; //angular icons
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component'; //angular icons
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { GameCardComponent } from './components/game-card/game-card.component'; 
     SignUpComponent,
     LoginComponent,
     GameCardComponent,
+    SingleGamePageComponent,
   ],
   imports: [
     BrowserModule,
