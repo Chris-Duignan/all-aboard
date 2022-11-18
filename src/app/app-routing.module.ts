@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'events', component: EventPageComponent },
   { path: 'user', component: UserPageComponent },
   { path: 'createEvent', component: EventFormComponent },
-  { path: 'events/:event_id', component: EventSinglePageComponent}
+  { path: 'events/:event_id', component: EventSinglePageComponent },
   { path: 'games', component: GamesPageComponent },
   { path: 'games/:game_id', component: SingleGamePageComponent },
 ];
