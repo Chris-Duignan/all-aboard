@@ -14,13 +14,13 @@ export class UserPageComponent implements OnInit {
   constructor(private usersService: UsersService) { }
   
   ngOnInit(): void {
-    this.getUser(2);
+    // this.getUser();
   }
 
   getUser(id: number): void {
-    this.usersService.getUser(id).subscribe((user) => {
-      console.log(user)
-      this.user = user;
-    })
+    // this.usersService.getUser(id).subscribe((user) => {
+    //   console.log(user)
+    //   this.user = user;
+    // })
   }
 }
