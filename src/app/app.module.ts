@@ -23,7 +23,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 //felix added -> in termainal installed 'ng add @angular/material'
 import {MatIconModule} from '@angular/material/icon';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular icons
-
+import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular 
     GamesPageComponent,
     EventFormComponent,
     SignUpComponent,
-    LoginComponent, 
+    LoginComponent,
+    EventSinglePageComponent,
   ],
   imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, MatIconModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), FontAwesomeModule],
   providers: [],
