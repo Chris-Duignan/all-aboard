@@ -15,15 +15,15 @@ import { GamesPageComponent } from './components/games-page/games-page.component
 import { EventFormComponent } from './components/event-form/event-form.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { LoginComponent } from './components/auth/login/login.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 //angualr styling using Angular Material
 //felix added -> in termainal installed 'ng add @angular/material'
-import {MatIconModule} from '@angular/material/icon';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular icons
-
+import { MatIconModule } from '@angular/material/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GameCardComponent } from './components/game-card/game-card.component'; //angular icons
 
 @NgModule({
   declarations: [
@@ -36,9 +36,21 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular 
     GamesPageComponent,
     EventFormComponent,
     SignUpComponent,
-    LoginComponent, 
+    LoginComponent,
+    GameCardComponent,
   ],
-  imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, MatIconModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
