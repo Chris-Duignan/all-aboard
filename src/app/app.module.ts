@@ -19,6 +19,11 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 
+//angualr styling using Angular Material
+//felix added -> in termainal installed 'ng add @angular/material'
+import {MatIconModule} from '@angular/material/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular icons
+
 
 @NgModule({
   declarations: [
@@ -31,9 +36,9 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     GamesPageComponent,
     EventFormComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent, 
   ],
-  imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())],
+  imports: [BrowserModule, CommonModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, MatIconModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

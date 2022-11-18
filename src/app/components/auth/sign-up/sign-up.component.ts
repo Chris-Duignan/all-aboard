@@ -22,9 +22,10 @@ form!: FormGroup;
     })
   }
 signUp(){
+  console.log(this.form.value)
   this.authService.signUp(this.form.value).subscribe(
     (data) => console.log(data.user.uid),
-    (error) => console.log(error),
+    // (error) => console.log(error),
     () => this.router.navigate(['login'])
   )
 }

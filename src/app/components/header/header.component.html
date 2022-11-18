@@ -1,4 +1,8 @@
 <header>
-    <h1>All Aboard</h1>
-    <button routerLink="/user">My Profile</button>
+    <!-- <h1>All Aboard</h1> -->
+    <!-- <ng-container *ngIf="auth.isLoggedIn$ | async as user; else null">
+        <span>     User {{ $any(user)?.displayName }} is logged in</span>
+      </ng-container> -->
+
+      <app-nav></app-nav> 
 </header>

@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     })
   }
 login(){
-  console.log(this.form.value)
   this.authService.login(this.form.value).subscribe(
     (data) => console.log(data),
     () => this.router.navigate(['events']))

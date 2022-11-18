@@ -1,9 +1,9 @@
-nav {
+/* nav {
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    /* bottom: 0; moved to top */ 
+    /* width: 100%;
     text-align: center;
     background-color: #231942;
     height: 5%;
@@ -19,4 +19,4 @@ button {
     flex-grow: 1;
     height: 100%;
     border-right: 1px solid #FFEAEC;
-}
+} */ 
