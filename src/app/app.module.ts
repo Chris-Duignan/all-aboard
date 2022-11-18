@@ -22,7 +22,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 //angualr styling using Angular Material
 //felix added -> in termainal installed 'ng add @angular/material'
 import { MatIconModule } from '@angular/material/icon';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular icons
+import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component'; //angular icons
 
@@ -38,6 +39,7 @@ import { SingleGamePageComponent } from './components/single-game-page/single-ga
     EventFormComponent,
     SignUpComponent,
     LoginComponent,
+    EventSinglePageComponent,
     GameCardComponent,
     SingleGamePageComponent,
   ],

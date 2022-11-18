@@ -28,9 +28,15 @@ export class EventsService {
   postEvent(meet: Meet): Observable<Meet> {
     return this.http.post<Meet>(this.eventsUrl, meet, this.httpOptions).pipe(
       map((response: any) => {
-        console.log(response);
         return response.event;
       })
+    )
+  }
+
+  getEventById(event_id: number): Observable<Meet> {
+    return this.http.get<Meet>(this.eventsUrl + '/' + event_id).pipe(map((response: any) => {
+      return response.event;
+    })
     )
   }
 }
