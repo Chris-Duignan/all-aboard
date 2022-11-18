@@ -3,6 +3,7 @@ import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AuthService } from 'src/app/services/authS/auth.service';
 import { Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -24,9 +25,10 @@ form!: FormGroup;
 signUp(){
   console.log(this.form.value)
   this.authService.signUp(this.form.value).subscribe(
-    (data) => console.log(data.user.uid),
-    // (error) => console.log(error),
-    () => this.router.navigate(['login'])
+        {
+        next: () => this.router.navigate(['login']),
+        error: (error) => console.log(error)
+      }
   )
 }
 }
