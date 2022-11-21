@@ -1,5 +1,6 @@
-<main>
-  <h2>Welcome back {{ user.username }}</h2>
+
+<main class="userProfile">
+  <h2>Welcome back {{ user.name }}</h2>
   <p>{{ user.email }}</p>
   <p>Your local area</p>
   <br />
@@ -13,6 +14,5 @@
   <h3>My friends</h3>
   <br />
   <ul></ul>
-  <button routerLink="createEvent">Create New Event</button>
-  
+  <button class="formButton" routerLink="createEvent">Create New Event</button>
 </main>

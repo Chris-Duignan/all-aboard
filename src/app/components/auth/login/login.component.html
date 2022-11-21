@@ -1,12 +1,20 @@
-<p>login works!</p>
-
-
 <div class="main-div">
   <form [formGroup]="form" class="form">
-    <input type="text" placeholder="email" formControlName ="email" />
-    <input type="text" placeholder="password" formControlName ="password" />
-    <button (click)="login()">Login</button>
+    <h3 class="logInTitle">Log In To Your Account</h3>
+    <input
+      class="input"
+      type="text"
+      placeholder="email"
+      formControlName="email"
+    />
+    <input
+      class="input"
+      type="password"
+      placeholder="password"
+      formControlName="password"
+    />
+    <button class="formButton" (click)="login()">Login</button>
   </form>
-
-  <button (click)="signUpClicked()">Sign Up!</button>
+  <p class="noAccountText">Not got an account yet?</p>
+  <button class="formButton" (click)="signUpClicked()">Sign Up!</button>
 </div>

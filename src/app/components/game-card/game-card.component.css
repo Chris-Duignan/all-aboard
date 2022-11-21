@@ -1,3 +1,16 @@
-.card {
-  border: 1px solid black;
+.gamesCard {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.gameBrief {
+  width: 300px;
+  padding-left: 20px;
+}
+
+img {
+  border-radius: 10px;
 }

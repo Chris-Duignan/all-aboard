@@ -1,19 +1,10 @@
-button {
-    border: 0;
-    outline: 0;
-    background-color: #0D5C63;
-    color: #FFEAEC;
-    padding: 5px;
-    border-radius: 5px;
+@media (min-width: 300px) and (max-width: 1024px) {
+  header {
+  }
 }
 
 header {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    background-color: #FFEAEC;
-}
-
-h1 {
-    color: #231942;
+  height: 100px;
+  max-width: 100%;
+  background-color: #5b9aa0;
 }

@@ -1,13 +1,32 @@
-<p>sign up!</p>
-
 <div class="main-div">
   <form [formGroup]="form" class="form">
-    <input type="text" placeholder="username" formControlName ="username" />
-    <input type="text" placeholder="email" formControlName ="email" />
-    <input type="text" placeholder="password" formControlName ="password" />
-    <input type="text" placeholder="location" formControlName ="location" />
-    <button (click)="signUp()">Sign Up</button>
+    <h3 class="createAccountText">Create Account</h3>
+    <input
+      class="input"
+      type="text"
+      placeholder="username"
+      formControlName="username"
+    />
+    <input
+      class="input"
+      type="text"
+      placeholder="email"
+      formControlName="email"
+    />
+    <input
+      class="input"
+      type="password"
+      placeholder="password"
+      formControlName="password"
+    />
+    <input
+      class="input"
+      type="text"
+      placeholder="location"
+      formControlName="location"
+    />
+    <button class="formButton" (click)="signUp()">Sign Up</button>
+    <p class="noAccountText">Already Have An Account?</p>
+    <button class="loginButton" (click)="loginClicked()">Log In</button>
   </form>
-
-  <button (click)="loginClicked()">Log In</button>
 </div>
