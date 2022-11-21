@@ -1,7 +1,6 @@
-<main>
-    <h2>Games!</h2>
-     <ul class="list">
-        <app-game-card *ngFor="let game of games" [game]="game">
-        </app-game-card>
-    </ul>
+<main class="gamesPage">
+  <h2>Games!</h2>
+  <ul class="gameCard">
+    <app-game-card *ngFor="let game of games" [game]="game"> </app-game-card>
+  </ul>
 </main>

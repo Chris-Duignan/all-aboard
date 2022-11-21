@@ -1,0 +1,74 @@
+@media (min-width: 300px) and (max-width: 1024px) {
+  .main-div {
+    margin: auto;
+    min-width: 100%;
+  }
+}
+
+.createAccountText {
+  color: white;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 10;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #622569;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 40%;
+}
+.form {
+  margin: auto;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.input {
+  /* flex-wrap: wrap; */
+  /* padding: 15px; */
+  /* margin: 20px; */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.formButton {
+  /* flex-wrap: wrap; */
+  /* padding: 20px; */
+  color: black;
+  margin-bottom: 20px;
+  width: 100px;
+  margin: auto;
+}
+
+.loginButton {
+  margin-bottom: 30px;
+  width: 100px;
+  margin: auto;
+}
+
+.noAccountText {
+  color: white;
+  font-weight: 100;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}

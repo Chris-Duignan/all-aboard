@@ -1,0 +1,12 @@
+.singleCard {
+  list-style-type: none;
+  text-align: center;
+  border: 3px solid #622569;
+  border-radius: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  margin: 20px;
+  padding: 10px;
+  max-width: 400px;
+}
