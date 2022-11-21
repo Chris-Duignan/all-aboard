@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/services/games/games.service';
 import { AuthService } from 'src/app/services/authS/auth.service';
-import { UsersService } from 'src/app/services/users/users.service';
 
 @Component({
   selector: 'app-game-card',
