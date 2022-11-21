@@ -24,15 +24,19 @@ export class AuthService {
     private usersService: UsersService
   ) {}
 
-  signUp({ username, email, password }: SignUpInfo) {
-    return from(
-      createUserWithEmailAndPassword(this.auth, email, password)
-    ).pipe(
-      switchMap(({ user }) => this.http.post('url', (user.uid, username)))
-    );
-  }
-  login({ email, password }: LoginInfo) {
-    return from(signInWithEmailAndPassword(this.auth, email, password));
+  signUp({username, email, password, location}: SignUpInfo){
+    return from(createUserWithEmailAndPassword(this.auth, email, password
+      )).pipe(
+        switchMap(({user}) => 
+         this.http.post('url', (user.uid, username, location)) 
+        ))
+      }
+  login({email, password}: LoginInfo){
+    return from(signInWithEmailAndPassword(this.auth, email, password)
+    )
+      }
+  signOut(){
+    return from(this.auth.signOut())
   }
   signOut() {
     return from(this.auth.signOut());

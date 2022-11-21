@@ -19,7 +19,8 @@ form!: FormGroup;
     this.form = new FormGroup({
       username: new FormControl(''),
       email: new FormControl(''),
-      password: new FormControl('')
+      password: new FormControl(''),
+      location: new FormControl('')
     })
   }
 signUp(){
@@ -30,5 +31,8 @@ signUp(){
         error: (error) => console.log(error)
       }
   )
+}
+loginClicked(){
+  this.router.navigate(['/login'])
 }
 }
