@@ -5,4 +5,12 @@
   <p>{{ shortDescription }}</p>
   <p>Players: {{ game.min_players }}-{{ game.max_players }}</p>
 </div>
+
+<li class="card">
+    <div routerLink={{gamePageLink}}>
+        <h3>{{formattedName}}</h3>
+        <p>{{shortDescription}}</p>
+        <p>Players: {{game.min_players}}-{{game.max_players}}</p>
+    </div>  
+    <button (click)="postGameToUserGames()">Add To My Games</button>
 </li>

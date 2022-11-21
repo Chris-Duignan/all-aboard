@@ -9,3 +9,18 @@
 .eventList {
   display: flex;
 }
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: #0d5c63;
+  color: #ffeaec;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.map {
+  height: 100px;
+  width:100px;
+}

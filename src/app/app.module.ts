@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {GoogleMapsModule} from "@angular/google-maps"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ import { SingleGamePageComponent } from './components/single-game-page/single-ga
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     FontAwesomeModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
