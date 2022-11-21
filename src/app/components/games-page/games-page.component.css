@@ -1,8 +1,10 @@
-main {
-  padding: 2.5rem;
-  background-color: #ffeaec;
-  flex-basis: 1;
+.gamesPage {
+  border: 5px solid #622569;
 }
-.list {
-  list-style: none;
-}
+
+/* .gamesCard {
+  border: 10px solid #622569;
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+} */

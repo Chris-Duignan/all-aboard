@@ -1,8 +1,7 @@
 <nav>
-    <fa-icon [icon]="faCoffee"></fa-icon>
-    <button routerLink="/user">My Profile</button>
-    <button routerLink="/events">All events</button>
-    <button routerLink="/games">All games</button>
-    <button routerLink="/events">Members</button>
-    <button (click)="signOut()">Sign Out</button>
+  <button class="navButton" routerLink="/user">My Profile</button>
+  <button class="navButton" routerLink="/events">All events</button>
+  <button class="navButton" routerLink="/games">All games</button>
+  <button class="navButton" routerLink="/events">Members</button>
+  <button class="signOut" (click)="signOut()">Sign Out</button>
 </nav>
