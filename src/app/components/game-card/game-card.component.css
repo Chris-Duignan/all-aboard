@@ -14,3 +14,16 @@
 img {
   border-radius: 10px;
 }
+
+.addToGames {
+  border: none;
+  font-size: 30px;
+  background-color: #d6d4e0;
+  cursor: pointer;
+  float: inline-end;
+  margin-left: 60px;
+  margin-top: 0px;
+}
+.addToGames:hover {
+  font-size: 40px;
+}
