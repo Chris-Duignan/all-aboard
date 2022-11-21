@@ -24,23 +24,22 @@ export class AuthService {
     private usersService: UsersService
   ) {}
 
-  signUp({username, email, password, location}: SignUpInfo){
-    return from(createUserWithEmailAndPassword(this.auth, email, password
-      )).pipe(
-        switchMap(({user}) => 
-         this.http.post('url', (user.uid, username, location)) 
-        ))
-      }
-  login({email, password}: LoginInfo){
-    return from(signInWithEmailAndPassword(this.auth, email, password)
-    )
-      }
-  signOut(){
-    return from(this.auth.signOut())
+  signUp({ username, email, password, location }: SignUpInfo) {
+    return from(
+      createUserWithEmailAndPassword(this.auth, email, password)
+    ).pipe(
+      switchMap(({ user }) =>
+        this.http.post('url', (user.uid, username, location))
+      )
+    );
+  }
+  login({ email, password }: LoginInfo) {
+    return from(signInWithEmailAndPassword(this.auth, email, password));
   }
   signOut() {
     return from(this.auth.signOut());
   }
+
   getCurrentUser() {
     return this.auth.onAuthStateChanged((user) => {
       this.currentUID = user?.uid;
