@@ -17,11 +17,11 @@ readonly isLoggedIn$ = authState(this.auth)
 
   constructor(private auth: Auth, private http: HttpClient) { }
 
-  signUp({username, email, password}: SignUpInfo){
+  signUp({username, email, password, location}: SignUpInfo){
     return from(createUserWithEmailAndPassword(this.auth, email, password
       )).pipe(
         switchMap(({user}) => 
-         this.http.post('url', (user.uid, username)) 
+         this.http.post('url', (user.uid, username, location)) 
         ))
       }
   login({email, password}: LoginInfo){
