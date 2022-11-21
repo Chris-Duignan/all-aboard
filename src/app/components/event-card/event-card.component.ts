@@ -1,4 +1,3 @@
-import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 
@@ -11,10 +10,12 @@ import { Input } from '@angular/core';
 export class EventCardComponent implements OnInit {
 
   @Input() meet: any;
+  singleEventPageLink = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.singleEventPageLink=`/events/${this.meet.event_id}`;
   }
 
 }

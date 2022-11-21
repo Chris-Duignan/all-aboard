@@ -1,8 +1,6 @@
-<li class="card">
-    <h3>{{meet.title}}</h3>
-    <p>{{meet.area}}</p>
-    <p>{{meet.date}}</p>
-    <p>{{meet.start_time}}</p>
-    <p>{{meet.organiser}}</p>
-    <p>Attending: {{meet.guests}}</p>
+<li class="card" routerLink="{{ singleEventPageLink }}">
+  <h3>{{ meet.title }}</h3>
+  <p>{{ meet.area }}</p>
+  <p>{{ meet.date }}</p>
+  <p>{{ meet.start_time }}</p>
 </li>
