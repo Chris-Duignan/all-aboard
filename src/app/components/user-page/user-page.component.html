@@ -1,11 +1,14 @@
 <main>
-  <h2>Welcome back {{ user.name }}</h2>
+  <h2>Welcome back {{ user.username }}</h2>
   <p>{{ user.email }}</p>
   <p>Your local area</p>
   <br />
   <h3>My Games</h3>
   <br />
-  <ul></ul>
+  <ul class="list">
+    <li *ngFor="let game of user.games"><p>{{game.game_title}}</p><img src="{{game.image_url}}" />
+    </li>
+</ul>
   <br />
   <h3>My friends</h3>
   <br />
