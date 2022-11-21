@@ -21,7 +21,7 @@ readonly isLoggedIn$ = authState(this.auth)
     return from(createUserWithEmailAndPassword(this.auth, email, password
       )).pipe(
         switchMap(({user}) => 
-         this.http.post('url', (user.uid, username, location)) 
+         this.http.post<any>('https://all-aboard.cyclic.app/api/users', {uid: user.uid, username, location}) 
         ))
       }
   login({email, password}: LoginInfo){
@@ -37,5 +37,5 @@ readonly isLoggedIn$ = authState(this.auth)
        })
     };  //! telling ts that there will be a user
  
-
+ 
 }
