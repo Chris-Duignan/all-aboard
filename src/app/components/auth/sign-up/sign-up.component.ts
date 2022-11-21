@@ -31,4 +31,7 @@ signUp(){
       }
   )
 }
+loginClicked(){
+  this.router.navigate(['/login'])
+}
 }

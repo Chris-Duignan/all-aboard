@@ -25,4 +25,7 @@ login(){
     (data) => console.log(data),
     () => this.router.navigate(['events']))
 }
+signUpClicked(){
+  this.router.navigate(['/sign-up'])
+}
 }

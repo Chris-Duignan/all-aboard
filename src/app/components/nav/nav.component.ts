@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/app/services/authS/auth.service';
 
@@ -10,13 +11,13 @@ import { AuthService } from 'src/app/services/authS/auth.service';
 })
 export class NavComponent implements OnInit {
   faCoffee = faCoffee;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
   signOut(){
     this.authService.signOut().subscribe(
-      (data) => console.log(data)
+      () => this.router.navigate(['/login'])
     )
    
   }
