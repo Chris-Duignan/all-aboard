@@ -29,7 +29,11 @@ export class AuthService {
       createUserWithEmailAndPassword(this.auth, email, password)
     ).pipe(
       switchMap(({ user }) =>
-        this.http.post('url', (user.uid, username, location))
+        this.http.post('https://all-aboard.cyclic.app/api/users', {
+          uid: user.uid,
+          username: username,
+          location: location,
+        })
       )
     );
   }
