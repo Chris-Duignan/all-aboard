@@ -1,5 +1,6 @@
 <main>
   <h2 class="eventsHeading">EVENTS</h2>
+  <app-map></app-map>
   <app-loading *ngIf="isLoading"></app-loading>
   <ul class="eventList" *ngIf="!isLoading">
     <app-event-card *ngFor="let meet of meets" [meet]="meet"> </app-event-card>
