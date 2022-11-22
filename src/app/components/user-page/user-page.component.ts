@@ -3,6 +3,7 @@ import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/authS/auth.service';
 import { StateService } from 'src/app/services/state/state.service';
 import { UsersService } from 'src/app/services/users/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-page',
@@ -12,7 +13,10 @@ import { UsersService } from 'src/app/services/users/users.service';
 export class UserPageComponent implements OnInit {
   user = <User>{};
 
-  constructor(public stateService: StateService) {}
+  constructor(
+    public stateService: StateService,
+    public router: Router
+    ) {}
 
   ngOnInit(): void {
     this.getUser();
@@ -20,5 +24,8 @@ export class UserPageComponent implements OnInit {
 
   getUser() {
     this.user = this.stateService.getUser();
+  }
+  goToCreateEvent(){
+    this.router.navigate(['createEvent'])
   }
 }
