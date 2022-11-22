@@ -47,6 +47,10 @@ export class MapComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.initMap();
     this.markerService.makeMarkers(this.map)
+    this.map.on("click", (e: any) => {
+      console.log(e.latlng)
+    })
   }
+
 
 }
