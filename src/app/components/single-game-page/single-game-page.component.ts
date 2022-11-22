@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GamesService } from 'src/app/services/games/games.service';
+import { StateService } from 'src/app/services/state/state.service';
 
 @Component({
   selector: 'app-single-game-page',
@@ -10,10 +11,12 @@ import { GamesService } from 'src/app/services/games/games.service';
 export class SingleGamePageComponent implements OnInit {
   game: any;
   formattedName = '';
+  user_id: any;
 
   constructor(
     private route: ActivatedRoute,
-    private gamesService: GamesService
+    private gamesService: GamesService,
+    public stateService: StateService
   ) {}
 
   ngOnInit(): void {
@@ -36,5 +39,17 @@ export class SingleGamePageComponent implements OnInit {
         })
         .join(' ');
     });
+  }
+
+  postGameToUserGames() {
+    this.user_id = this.stateService.getUser().user_id;
+    this.gamesService
+      .postGameToUserGames(this.user_id, this.game.game_id)
+      .subscribe(() => {
+        this.stateService.addGame({
+          game_id: this.game.game_id,
+          game_title: this.game.name,
+        });
+      });
   }
 }
