@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { EventPageComponent } from './components/event-page/event-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { MessagesComponent } from './components/messages/messages.component';
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { GamesPageComponent } from './components/games-page/games-page.component';
@@ -27,7 +29,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular 
 import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
-import { LoadingComponent } from './components/loading/loading.component'; //angular icons
+import { LoadingComponent } from './components/loading/loading.component';
+import { JoinChatComponent } from './components/join-chat/join-chat.component';
+import { ChatCardComponent } from './components/chat-card/chat-card.component'; //angular icons
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { LoadingComponent } from './components/loading/loading.component'; //ang
     EventPageComponent,
     HeaderComponent,
     NavComponent,
+    MessagesComponent,
+    ChatComponent,
     EventCardComponent,
     UserPageComponent,
     GamesPageComponent,
@@ -45,6 +51,8 @@ import { LoadingComponent } from './components/loading/loading.component'; //ang
     GameCardComponent,
     SingleGamePageComponent,
     LoadingComponent,
+    JoinChatComponent,
+    ChatCardComponent,
   ],
   imports: [
     BrowserModule,

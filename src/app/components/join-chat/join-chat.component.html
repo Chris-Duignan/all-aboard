@@ -1,0 +1,6 @@
+<main class="join-chat">
+    <div>
+        <app-chat-card *ngFor="let event of events" [event]="event" (click)="onJoin(event, $event)"></app-chat-card>
+    </div>
+
+</main>

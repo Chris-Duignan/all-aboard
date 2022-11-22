@@ -14,6 +14,8 @@ import {
 import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 import { GamesPageComponent } from './components/games-page/games-page.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
+import { JoinChatComponent } from './components/join-chat/join-chat.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'sign-up', pathMatch: 'full' },
@@ -41,6 +43,8 @@ const routes: Routes = [
   { path: 'events/:event_id', component: EventSinglePageComponent },
   { path: 'games', component: GamesPageComponent },
   { path: 'games/:game_id', component: SingleGamePageComponent },
+  { path: 'join-chat', component: JoinChatComponent },
+  { path: 'chat', component: ChatComponent },
 ];
 
 @NgModule({

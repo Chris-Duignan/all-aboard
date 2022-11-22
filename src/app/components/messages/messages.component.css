@@ -1,0 +1,125 @@
+.message-box{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    width: 22.3em;
+    max-width: 22.3;
+    height: 28em;
+    overflow-y: scroll;
+    margin-bottom: 0.5em;
+}
+.message-box > .message{
+    padding:0.8em;
+}
+.message-box> .my{
+    padding-right: 0.8em;
+}
+.message{
+
+    background-color: rgba(0, 0, 0, 0.1);
+    box-sizing: content-box;
+    border-radius: 10px;
+    margin:0.3em;
+    padding-bottom: 0;
+    margin-left:1em;
+    max-width: fit-content;
+    display:flex;
+    justify-content:flex-start;
+
+}
+.message > div {
+    min-width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.2em;
+}
+.time-stamp{
+    font-size: x-small;
+    margin: 0;
+    margin-top: 0.2em;
+    color:grey;
+}
+
+.my > div > .time-stamp{
+    color:whitesmoke;
+}
+.my > div{
+    justify-content: flex-end;
+}
+.time-div{
+    justify-content: center;
+}
+.message-box > .my{
+    margin-left: none;
+    margin-right:1em;
+    background-color: rgb(143, 96, 187);
+    align-self: flex-end;
+    color: white;
+}
+.message-box > .bot {
+    display: flex;
+    justify-content:flex-start;
+    background-color: rgba(0,0,0,0);
+    color:grey;
+    min-width: 14em;
+    border-radius: 0;
+    padding: 0;
+}
+.bot > p{
+    min-width: 20em;
+    inline-size: 20em;
+    text-align: center;
+    font-size: small;
+}
+.bot > p span:after{
+    visibility: hidden;
+}
+.message > p span:after{
+    content:': ';
+}
+
+.message:not(.bot){
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 10em;
+    box-sizing: content-box;
+    margin: 0.3em;
+    white-space: initial;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding-top:0;
+    padding-bottom: 0;
+}
+.bot{
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
+.bot > .message-content {
+    text-align: center;
+}
+.message > p {
+    overflow-wrap: break-word;
+    display: inline-block;
+    justify-content: flex-start;
+    text-align: left;
+    max-width: 10em;
+    margin: 0.1em;
+    max-height: fit-content;
+}
+.my > p:not(.bot){
+    text-align: left;
+}
+
+.message > p span:after{
+    content: ":";
+}
+.message > p span{
+    color: black;
+    font-weight: 600;
+}
+.message-box > .my p span{
+    color: white;
+}
