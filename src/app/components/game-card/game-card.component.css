@@ -1,14 +1,22 @@
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+  .gameBrief {
+    max-width: 100%;
+  }
+}
+
 .gamesCard {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
   list-style-type: none;
-  padding: 10px;
-  margin: 10px;
+  /* padding: 10px; */
+  /* margin: 10px; */
 }
 
 .gameBrief {
-  width: 300px;
-  padding-left: 20px;
+  width: 200px;
+  border: 1px solid grey;
 }
 
 img {
@@ -25,5 +33,5 @@ img {
   margin-top: 0px;
 }
 .addToGames:hover {
-  font-size: 40px;
+  font-size: 50px;
 }

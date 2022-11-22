@@ -1,26 +1,22 @@
-.allEventsHeading {
+.eventsHeading {
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   padding: 10px;
+  letter-spacing: 4px;
+  font-size: 50px;
+  font-weight: 100;
+  color: #622569;
+  font-style: italic;
 }
 
 .eventList {
   display: flex;
+  justify-content: space-around;
 }
-
-button {
-  border: 0;
-  outline: 0;
-  background-color: #0d5c63;
-  color: #ffeaec;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 
 .map {
   height: 100px;
-  width:100px;
+  width: 100px;
 }

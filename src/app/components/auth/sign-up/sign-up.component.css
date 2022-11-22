@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .main-div {
     margin: auto;
     min-width: 100%;
