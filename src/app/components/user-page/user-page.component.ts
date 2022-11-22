@@ -15,17 +15,26 @@ export class UserPageComponent implements OnInit {
 
   constructor(
     public stateService: StateService,
-    public router: Router
-    ) {}
+    public router: Router,
+    public authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.getUser();
+    if (this.user.uid === '') {
+      if (this.authService.isLoggedIn$) {
+        this.authService.getCurrentUser();
+        while (this.user.uid === '') {
+          this.getUser();
+        }
+      }
+    }
   }
 
   getUser() {
     this.user = this.stateService.getUser();
   }
-  goToCreateEvent(){
-    this.router.navigate(['createEvent'])
+  goToCreateEvent() {
+    this.router.navigate(['createEvent']);
   }
 }

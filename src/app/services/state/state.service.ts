@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { AuthService } from '../authS/auth.service';
 import { UsersService } from '../users/users.service';
 
 @Injectable({
