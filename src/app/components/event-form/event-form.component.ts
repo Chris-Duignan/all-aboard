@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from 'src/app/services/events/events.service';
+import { StateService } from 'src/app/services/state/state.service';
 import { Meet } from '../../classes/event';
 
 @Component({
@@ -9,9 +10,11 @@ import { Meet } from '../../classes/event';
 })
 export class EventFormComponent {
 
-  constructor(private eventsService: EventsService) {}
+  constructor(private eventsService: EventsService, private stateService: StateService) {}
 
   submitted = false;
+  location: any
+  currentUserId: any = this.stateService.getUser().user_id
   
   model = new Meet(
     '',
@@ -26,7 +29,10 @@ export class EventFormComponent {
     false,
     ''
   );
-
+saveLocation(eventInfo: any){
+  this.location = eventInfo
+  console.log('in form land', this.location)
+}
   newMeet() {
     this.model = new Meet(
       '',

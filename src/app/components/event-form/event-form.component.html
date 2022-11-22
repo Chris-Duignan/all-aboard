@@ -1,10 +1,13 @@
 <section>
   <section [hidden]="submitted">
     <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
-      <img
+      <app-map
+      (myOutputValue)="saveLocation($event)"
+      ></app-map>
+      <!-- <img
         style="width: 200px; border: 1px solid black"
         src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
-      />
+      /> -->
       <p>-- Location map to go here --</p>
       <label for="title">Event title: </label>
       <input
