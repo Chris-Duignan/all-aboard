@@ -28,7 +28,8 @@ import { EventSinglePageComponent } from './components/event-single-page/event-s
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { MapComponent } from './components/map/map.component';//angular icons
+import { MapComponent } from './components/map/map.component';
+import { DiceComponent } from './components/dice/dice.component';//angular icons
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MapComponent } from './components/map/map.component';//angular icons
     SingleGamePageComponent,
     LoadingComponent,
     MapComponent,
+    DiceComponent,
   ],
   imports: [
     BrowserModule,
