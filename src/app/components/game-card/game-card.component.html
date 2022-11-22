@@ -1,9 +1,11 @@
-<li class="gamesCard" routerLink="{{ gamePageLink }}">
-  <img width="100" src="{{ game.image_url }}" />
-  <div class="gameBrief">
-    <h3>{{ formattedName }}</h3>
-    <p>{{ shortDescription }}</p>
-    <p>Players: {{ game.min_players }} - {{ game.max_players }}</p>
-  </div>
-</li>
-<button class="addToGames" (click)="postGameToUserGames()">+</button>
+<div class="gameContainer">
+  <li class="gamesCard" routerLink="{{ gamePageLink }}">
+    <img max-width="100" src="{{ game.image_url }}" />
+    <div class="gameBrief">
+      <h3 class="gameTitle">{{ formattedName }}</h3>
+      <p class="gameDesc">{{ shortDescription }}</p>
+      <p>Players: {{ game.min_players }} - {{ game.max_players }}</p>
+    </div>
+  </li>
+  <button class="addToGames" (click)="postGameToUserGames()">+</button>
+</div>
