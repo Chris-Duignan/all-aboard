@@ -3,5 +3,6 @@
 <br>
 <p>Players: {{game.min_players}}-{{game.max_players}}</p>
 <a href={{game.rules_url}}>Rules</a>
+<button class="addToGames" (click)="postGameToUserGames()">+</button>
 <br>
 <img src={{game.image_url}} />
