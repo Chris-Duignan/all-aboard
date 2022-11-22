@@ -3,7 +3,8 @@
   <google-map class="map"></google-map>
   <h2>All Events</h2>
   <p class="demoMap">insert map here</p>
-  <ul class="eventList">
+  <app-loading *ngIf="isLoading"></app-loading>
+  <ul class="eventList" *ngIf="!isLoading">
     <app-event-card *ngFor="let meet of meets" [meet]="meet"> </app-event-card>
   </ul>
 </main>

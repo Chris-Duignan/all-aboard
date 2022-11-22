@@ -10,10 +10,12 @@ import { formatDate } from '../../../utils/formatDate';
 })
 export class EventPageComponent implements OnInit {
   meets: Meet[] = [];
+  isLoading = false;
 
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.getEvents();
   }
 
@@ -23,6 +25,7 @@ export class EventPageComponent implements OnInit {
       meets.map((meet) => {
         meet.date = formatDate(meet.date);
       });
+      this.isLoading = false;
     });
   }
 }
