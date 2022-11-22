@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +27,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //angular 
 import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
-import { LoadingComponent } from './components/loading/loading.component'; //angular icons
+import { LoadingComponent } from './components/loading/loading.component';
+import { MapComponent } from './components/map/map.component';//angular icons
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LoadingComponent } from './components/loading/loading.component'; //ang
     GameCardComponent,
     SingleGamePageComponent,
     LoadingComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,7 @@ import { LoadingComponent } from './components/loading/loading.component'; //ang
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     FontAwesomeModule,
-    GoogleMapsModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent],
