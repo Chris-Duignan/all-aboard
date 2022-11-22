@@ -28,11 +28,12 @@ signUp(){
   this.authService.signUp(this.form.value).subscribe(
         {
         next: () => this.router.navigate(['login']),
-        error: (error) => console.log(error)
+        error: (error) => alert(error)
       }
   )
 }
 loginClicked(){
-  this.router.navigate(['/login'])
+  this.router.navigate(['login'])
+  console.log('clicked')
 }
 }
