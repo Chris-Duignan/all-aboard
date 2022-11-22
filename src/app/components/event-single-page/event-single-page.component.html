@@ -4,12 +4,12 @@
     <p>{{ meet.description }}</p>
     <p>Where: {{ meet.area }}</p>
     <p>When: {{ formatDate }}</p>
-    <p>Time: {{ meet.start_time }}</p>
+    <p>Time: {{ meet.start_time.slice(0, 5) }}</p>
     <p>Organiser: {{ meet.organiser }}</p>
-    <p>Duration: {{ meet.duration }}</p>
+    <p>Duration: {{ meet.duration }} mins</p>
     <p>Visibility: {{ meet.visibility }}</p>
     <p>Teacher Available: {{ meet.willing_to_teach }}</p>
-    <p>Games Provided: {{ meet.games }}</p>
-    <p>Who's Attending: {{ meet.guests }}</p>
+    <p>Games Provided: {{ meet.games.join(", ") }}</p>
+    <p>Who's Attending: {{ meet.guests.join(", ") }}</p>
   </li>
 </main>
