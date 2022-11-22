@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../../services/events/events.service';
-import { Meet } from 'src/app/classes/event';
 import { formatDate } from '../../../utils/formatDate';
 
 @Component({
@@ -26,6 +25,7 @@ export class EventPageComponent implements OnInit {
       this.meets = meets;
       meets.map((meet) => {
         meet.date = formatDate(meet.date);
+        meet.latitude = parseFloat(meet.latitude)
       });
       this.isLoading = false;
     });

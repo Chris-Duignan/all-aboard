@@ -5,9 +5,9 @@ export interface Meets {
 export interface Meet {
     event_id: number,
     title: string,
+    latitude: any,
+    longitude: any,
     description: string | null,
-    latitude: string,
-    longitude: string,
     area: string,
     date: string,
     start_time: string,
