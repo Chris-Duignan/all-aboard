@@ -8,11 +8,12 @@ import { formatDate } from '../../../utils/formatDate';
   styleUrls: ['./event-page.component.css'],
 })
 export class EventPageComponent implements OnInit {
-  meets: any;
+
+  meets: any = [];
   isLoading = false;
 
-  constructor(private eventsService: EventsService) {
-  }
+
+  constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
     this.isLoading = true;

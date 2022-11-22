@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/authS/auth.service';
+import { StateService } from 'src/app/services/state/state.service';
 import { UsersService } from 'src/app/services/users/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-page',
@@ -12,20 +14,27 @@ export class UserPageComponent implements OnInit {
   user = <User>{};
 
   constructor(
-    private usersService: UsersService,
+    public stateService: StateService,
+    public router: Router,
     public authService: AuthService
   ) {}
 
   ngOnInit(): void {
-    this.authService.getCurrentUser();
-    this.getUser(this.authService.currentUserId);
+    this.getUser();
+    if (this.user.uid === '') {
+      if (this.authService.isLoggedIn$) {
+        this.authService.getCurrentUser();
+        while (this.user.uid === '') {
+          this.getUser();
+        }
+      }
+    }
   }
 
-  getUser(id: number): void {
-    this.authService.getCurrentUser();
-    this.usersService.getUser(id).subscribe((user) => {
-      console.log(user);
-      this.user = user;
-    });
+  getUser() {
+    this.user = this.stateService.getUser();
+  }
+  goToCreateEvent() {
+    this.router.navigate(['createEvent']);
   }
 }
