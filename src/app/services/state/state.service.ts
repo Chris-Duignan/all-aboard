@@ -32,6 +32,10 @@ export class StateService {
     this.user.games.push(game);
   }
 
+  addEvent(event: any) {
+    this.user.events.push(event);
+  }
+
   fetchUserDetails(uid: string) {
     console.log('fetching user details...');
     this.usersService.getUserIdByUID(uid).subscribe((user_id) => {
