@@ -1,7 +1,11 @@
 <header>
     <!-- <h1>All Aboard</h1> -->
-    <ng-container *ngIf="authService.isLoggedIn$ | async as user; else null">
+    <!-- <ng-container *ngIf="authService.isLoggedIn$ | async as user; else null">
         <span>     User {{  $any(user)?.uid }} is logged in</span>
+      </ng-container> -->
+
+      <ng-container *ngIf="authService.isLoggedIn$ | async as user; else null">
+        <span>     User {{ username}} is logged in</span>
       </ng-container>
 
       <app-nav></app-nav> 
