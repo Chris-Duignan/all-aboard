@@ -3,6 +3,7 @@ import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AuthService } from 'src/app/services/authS/auth.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,9 +22,11 @@ export class LoginComponent implements OnInit {
     })
   }
 login(){
-  this.authService.login(this.form.value).subscribe(
-    (data) => console.log(data),
-    () => this.router.navigate(['events']))
+  this.authService.login(this.form.value).subscribe({
+    next: () => this.router.navigate(['events']),
+    error: (error) => alert(error)
+  })
+    
 }
 signUpClicked(){
   this.router.navigate(['/sign-up'])
