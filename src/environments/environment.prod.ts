@@ -1,5 +1,4 @@
 export const environment = {
-  GOOGLE_MAPS_KEY : process.env["GOOGLE_MAPS_KEY"],
   firebase: {
     projectId: 'all-aboard-60792',
     appId: '1:25387963515:web:542a18bcb89cc565323ede',
