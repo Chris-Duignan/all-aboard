@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as L from "leaflet"
-import { Meet } from 'src/app/classes/event';
 import { EventsService } from '../events/events.service';
+import { PopupService } from '../popup.service';
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { EventsService } from '../events/events.service';
 })
 export class MarkerService {
 
-  constructor(private eventsService: EventsService) {}
+  constructor(private eventsService: EventsService, private popupService: PopupService) {}
 
   makeMarkers(map: L.Map): void {
       this.eventsService.getEvents().subscribe((meets) => {
@@ -18,8 +18,8 @@ export class MarkerService {
           meet.longitude = parseFloat(meet.longitude);
         });
         for (const location of meets) {
-          console.log(location)
           const marker = L.marker([location.latitude, location.longitude])
+          marker.bindPopup(this.popupService.makeMeetPopup(location))
           marker.addTo(map);
         }
       });
