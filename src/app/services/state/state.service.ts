@@ -9,15 +9,17 @@ export class StateService {
     uid: '',
     user_id: 0,
     username: '',
-    name: '',
+    location: '',
     email: '',
     friends: new Array(),
     games: new Array(),
+    events: new Array(),
   };
 
   constructor(private usersService: UsersService) {}
 
   getUser() {
+    console.log(this.user);
     return this.user;
   }
 

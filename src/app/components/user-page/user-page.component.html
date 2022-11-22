@@ -1,9 +1,7 @@
 
 <main class="userProfile">
-  <h2>Welcome back {{ user.name }}</h2>
-  <p>{{ user.email }}</p>
-  <p>Your local area</p>
-  <br />
+  <h2>Welcome back {{ user.username }}</h2>
+<br/>
   <h3>My Games</h3>
   <br />
   <ul class="list">
@@ -13,6 +11,14 @@
   <br />
   <h3>My friends</h3>
   <br />
-  <ul></ul>
+<p>we don't have friends lol</p>
+<br/>
+  <h3>My Events</h3>
+  <br />
+  <ul class="list">
+    <li *ngFor="let event of user.events"><p>{{event.name}}</p>
+    </li>
+</ul>
+<br/>
   <button class="formButton" routerLink="createEvent">Create New Event</button>
 </main>

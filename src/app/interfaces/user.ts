@@ -1,8 +1,10 @@
 export interface User {
   user_id: number;
+  uid: string;
   username: string;
-  name: string;
+  location: string;
   email: string;
   friends: number[];
   games: any[];
+  events: any[];
 }

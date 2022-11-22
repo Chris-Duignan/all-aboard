@@ -20,6 +20,5 @@ export class UserPageComponent implements OnInit {
 
   getUser() {
     this.user = this.stateService.getUser();
-    console.log(this.user);
   }
 }
