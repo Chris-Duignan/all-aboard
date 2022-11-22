@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/authS/auth.service';
+import { StateService } from 'src/app/services/state/state.service';
 import { UsersService } from 'src/app/services/users/users.service';
 
 @Component({
@@ -11,21 +12,14 @@ import { UsersService } from 'src/app/services/users/users.service';
 export class UserPageComponent implements OnInit {
   user = <User>{};
 
-  constructor(
-    private usersService: UsersService,
-    public authService: AuthService
-  ) {}
+  constructor(public stateService: StateService) {}
 
   ngOnInit(): void {
-    this.authService.getCurrentUser();
-    this.getUser(this.authService.currentUserId);
+    this.getUser();
   }
 
-  getUser(id: number): void {
-    this.authService.getCurrentUser();
-    this.usersService.getUser(id).subscribe((user) => {
-      console.log(user);
-      this.user = user;
-    });
+  getUser() {
+    this.user = this.stateService.getUser();
+    console.log(this.user);
   }
 }

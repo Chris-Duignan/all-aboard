@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/services/games/games.service';
 import { AuthService } from 'src/app/services/authS/auth.service';
+import { StateService } from 'src/app/services/state/state.service';
 
 @Component({
   selector: 'app-game-card',
@@ -17,10 +18,12 @@ export class GameCardComponent implements OnInit {
 
   constructor(
     private gamesService: GamesService,
-    public authService: AuthService
+    public authService: AuthService,
+    public stateService: StateService
   ) {}
 
   ngOnInit(): void {
+    this.user_id = this.stateService.getUser().user_id;
     this.formattedName = this.game.name
       .split('-')
       .map((word: string) => {
@@ -36,11 +39,13 @@ export class GameCardComponent implements OnInit {
   }
 
   postGameToUserGames() {
-    // this.authService.getCurrentUser();
-    this.user_id = this.authService.currentUserId;
     this.gamesService
       .postGameToUserGames(this.user_id, this.game.game_id)
       .subscribe(({ userGame }) => {
+        this.stateService.addGame({
+          game_id: this.game.game_id,
+          game_title: this.game.name,
+        });
         this.games.push(userGame.game_id);
       });
   }
