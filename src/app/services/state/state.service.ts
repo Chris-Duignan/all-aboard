@@ -21,7 +21,6 @@ export class StateService {
   constructor(private usersService: UsersService) {}
 
   getUser() {
-    console.log(this.user);
     return this.user;
   }
 
@@ -34,10 +33,11 @@ export class StateService {
   }
 
   fetchUserDetails(uid: string) {
+    console.log('fetching user details...');
     this.usersService.getUserIdByUID(uid).subscribe((user_id) => {
       this.usersService.getUser(user_id).subscribe((user) => {
-        //this.user.uid = uid;
         this.user = { ...user, uid: uid };
+        console.log(this.user);
       });
     });
   }
