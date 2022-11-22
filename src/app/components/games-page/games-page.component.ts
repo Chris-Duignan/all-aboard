@@ -15,15 +15,13 @@ export class GamesPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading = true;
+    this.getGames();
+  }
+
+  getGames(): void {
     this.gamesService.getGames().subscribe((games) => {
       this.games = games;
       this.isLoading = false;
     });
   }
-
-  // getGames(): void {
-  //   this.gamesService.getGames().subscribe((games) => {
-  //     this.games = games;
-  //   });
-  // }
 }
