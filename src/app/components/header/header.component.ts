@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { AuthService } from 'src/app/services/authS/auth.service';
 import { StateService } from 'src/app/services/state/state.service';
 
@@ -10,6 +11,7 @@ import { StateService } from 'src/app/services/state/state.service';
 export class HeaderComponent implements OnInit {
   //authSerice in constructor has to be public, creates error when private
   username: any;
+  auth = getAuth();
   constructor(
     public authService: AuthService,
     public stateService: StateService
@@ -17,6 +19,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurrentUser();
+    onAuthStateChanged(this.auth, (user) => {
+      if (user) {
+        this.stateService.fetchUserDetails(user.uid);
+      } else {
+        console.log('no user logged in');
+      }
+    });
   }
 
   getCurrentUser() {

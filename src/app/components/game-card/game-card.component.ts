@@ -23,7 +23,7 @@ export class GameCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.user_id = this.stateService.getUser().user_id;
+    //this.user_id = this.stateService.getUser().user_id;
     this.formattedName = this.game.name
       .split('-')
       .map((word: string) => {
@@ -39,6 +39,7 @@ export class GameCardComponent implements OnInit {
   }
 
   postGameToUserGames() {
+    this.user_id = this.stateService.getUser().user_id;
     this.gamesService
       .postGameToUserGames(this.user_id, this.game.game_id)
       .subscribe(({ userGame }) => {
