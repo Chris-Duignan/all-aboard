@@ -9,8 +9,10 @@ import { formatDate } from '../../../utils/formatDate';
   styleUrls: ['./event-page.component.css'],
 })
 export class EventPageComponent implements OnInit {
-  meets: Meet[] = [];
+
+  meets: any = [];
   isLoading = false;
+
 
   constructor(private eventsService: EventsService) {}
 

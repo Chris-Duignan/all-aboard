@@ -1,8 +1,4 @@
 <header>
   <h1>ALL ABOARD</h1>
-  <ng-container *ngIf="authService.isLoggedIn$ | async as user; else null">
-    <span> User {{ $any(user)?.uid }} is logged in</span>
-  </ng-container>
-
   <app-nav></app-nav>
 </header>

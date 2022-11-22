@@ -22,20 +22,20 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventPageComponent,
-    canActivate: [AuthGuard],
-    data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
+    // canActivate: [AuthGuard],
+    // data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
   },
   {
     path: 'user',
     component: UserPageComponent,
-    canActivate: [AuthGuard],
-    data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
+    // canActivate: [AuthGuard],
+    // data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
   },
   {
     path: 'createEvent',
     component: EventFormComponent,
-    canActivate: [AuthGuard],
-    data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
+    // canActivate: [AuthGuard],
+    // data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
   },
 
   { path: 'events/:event_id', component: EventSinglePageComponent },

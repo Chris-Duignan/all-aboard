@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../../services/events/events.service';
 import { formatDate } from '../../../utils/formatDate';
-import { Meet } from 'src/app/classes/event';
+// import { Meet } from 'src/app/classes/event';
 import { ActivatedRoute } from '@angular/router';
 import { Input } from '@angular/core';
 
@@ -25,6 +25,7 @@ formatDate = '';
 
   getEventById(event_id: number): void {
     this.eventsService.getEventById(event_id).subscribe((meet) => {
+    
       this.meet=meet;
    this.formatDate = formatDate(this.meet.date);
       
