@@ -32,8 +32,5 @@ login(){
   })
     
 }
-signUpClicked(){
-  this.router.navigate(['/sign-up'])
-}
 
 }
