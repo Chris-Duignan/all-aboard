@@ -1,8 +1,9 @@
 <main>
   <h2 class="eventsHeading">EVENTS</h2>
   <google-map class="map"></google-map>
-  <!-- <p class="demoMap">insert map here</p> -->
-  <ul class="eventList">
+  <p class="demoMap">insert map here</p>
+  <app-loading *ngIf="isLoading"></app-loading>
+  <ul class="eventList" *ngIf="!isLoading">
     <app-event-card *ngFor="let meet of meets" [meet]="meet"> </app-event-card>
   </ul>
 </main>

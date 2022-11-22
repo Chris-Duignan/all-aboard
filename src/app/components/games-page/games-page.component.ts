@@ -9,16 +9,19 @@ import { Game } from 'src/app/classes/game';
 })
 export class GamesPageComponent implements OnInit {
   games: Game[] = [];
+  isLoading = false;
 
   constructor(private gamesService: GamesService) {}
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.getGames();
   }
 
   getGames(): void {
     this.gamesService.getGames().subscribe((games) => {
       this.games = games;
+      this.isLoading = false;
     });
   }
 }
