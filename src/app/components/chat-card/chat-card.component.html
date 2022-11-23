@@ -1,0 +1,8 @@
+<section class="event-card">
+    <h2 class="title">{{event.title}}</h2><button (click)="toggleMembers()">members: {{members.length}}</button>
+    <div *ngIf="showMembers" class="members-info">
+        <div class="members">
+            <p *ngFor="let member of members" >{{member}}</p>
+        </div>
+    </div>
+</section>
