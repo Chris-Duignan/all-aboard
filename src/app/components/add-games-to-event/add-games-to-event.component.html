@@ -1,0 +1,7 @@
+<main class="gamesPage">
+    <h2>Add Games To Your Event</h2>
+    <app-loading *ngIf="isLoading"></app-loading>
+    <ul class="gameCard" *ngIf="!isLoading">
+      <app-game-card *ngFor="let game of games" [game]="game"> </app-game-card>
+    </ul>
+  </main>

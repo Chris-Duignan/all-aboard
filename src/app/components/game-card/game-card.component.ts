@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/services/games/games.service';
 import { AuthService } from 'src/app/services/authS/auth.service';
 import { StateService } from 'src/app/services/state/state.service';
+import { EventsService } from 'src/app/services/events/events.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game-card',
@@ -15,15 +17,21 @@ export class GameCardComponent implements OnInit {
   gamePageLink = '';
   games = new Array<number>();
   user_id: any;
+  event_id: any;
 
   constructor(
     private gamesService: GamesService,
     public authService: AuthService,
-    public stateService: StateService
+    public stateService: StateService,
+    public eventsService: EventsService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     //this.user_id = this.stateService.getUser().user_id;
+    this.route.params.subscribe(
+      (params) => (this.event_id = params['event_id'])
+    );
     this.formattedName = this.game.name
       .split('-')
       .map((word: string) => {
@@ -38,6 +46,14 @@ export class GameCardComponent implements OnInit {
     this.gamePageLink = `/games/${this.game.game_id}`;
   }
 
+  handleButtonClick() {
+    if (this.event_id) {
+      this.postGameToEvent();
+    } else {
+      this.postGameToUserGames();
+    }
+  }
+
   postGameToUserGames() {
     this.user_id = this.stateService.getUser().user_id;
     this.gamesService
@@ -49,5 +65,11 @@ export class GameCardComponent implements OnInit {
         });
         this.games.push(userGame.game_id);
       });
+  }
+
+  postGameToEvent() {
+    this.eventsService
+      .postGameToEvent(this.event_id, this.game.game_id)
+      .subscribe();
   }
 }
