@@ -32,7 +32,9 @@ export class ChatComponent implements OnInit {
     liked?: boolean, 
     bot: boolean
     time?: any
-  }[]=[{message:'', bot:true}];
+
+  }[]=[{message:'', bot: true}];
+
   displayMessages: {
     message: string, 
     username?: string, 
@@ -104,6 +106,7 @@ export class ChatComponent implements OnInit {
 
 
   recieveMessages(messages:any){
+    console.log(messages)
     if(!messages.length){
       localStorage.setItem(`messages.${this.roomName}`, '')
     }
@@ -114,9 +117,13 @@ export class ChatComponent implements OnInit {
         return message;
     })
     this.messageList = this.displayMessages.filter((msg:any) => {
-      if(this.messageList.indexOf(msg) === -1){
-        return msg;
-      }
+
+
+      return msg;
+      // if(this.messageList.includes(msg)){
+      //   return msg;
+      
+      // }
     })
 
     localStorage.setItem(`messages.${this.roomName}`, JSON.stringify(this.displayMessages))

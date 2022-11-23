@@ -4,6 +4,8 @@ import { ChatUser } from '../../interfaces/ChatUser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventsService } from '../../services/events/events.service'
 import { ChatCardComponent } from 'src/app/components/chat-card/chat-card.component';
+import { StateService } from 'src/app/services/state/state.service';
+import { User } from 'src/app/interfaces/user';
 
 
 @Component({
@@ -15,7 +17,7 @@ export class JoinChatComponent implements OnInit {
   events:any[]=[];
   roomName:string='';
   eventDate:string='';
-  username:string='tess';
+  username:string='';
 
   showMembers:boolean=false;
 
@@ -23,16 +25,23 @@ export class JoinChatComponent implements OnInit {
     public Events : EventsService,
     private _route: ActivatedRoute,
     private _router: Router,
+    public state: StateService
     ) { }
 
-  // model = new ChatUser(this.username, {roomName: this.roomName, endDate: this.eventDate})
+    user:any;
+
 
   ngOnInit(): void {
-    this.Events.getEventById(3)
-    .subscribe((data) => {
-      console.log(data)
-      this.events.push(data);
-    })
+
+    setTimeout(() => {
+
+      this.Events.getEventsByUserId(this.state.getUser().user_id)
+      .subscribe((data) => {
+        this.events = data;
+
+      })
+    },1000)
+    
   }
   onJoin(event:any, clicked:any){
     if(clicked.target.innerText.includes('members')){
@@ -44,7 +53,7 @@ export class JoinChatComponent implements OnInit {
       this._router.navigate(['/chat'], {
       relativeTo: this._route,
       queryParams: {
-        user: `${this.username}`,
+        user: `${this.state.getUser().username}`,
         room: `${this.roomName}`,
         date: `${this.eventDate}`
       },

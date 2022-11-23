@@ -15,7 +15,6 @@ export class ChatCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.event.guests[0].username)
     this.event.guests.forEach((guest:any) => {
       this.members.push(guest.username)
     })
