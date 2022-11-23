@@ -30,11 +30,14 @@ export class DiceComponent implements OnInit {
   }
 
   rollDice() {
-    for (let i = 0; i < this.diceValues.length; i++) {
-      this.diceValues[i].value = Math.floor(Math.random() * 6) + 1;
-      this.diceValues[i].imagePath =
-        this.diceImages[this.diceValues[i].value - 1];
-      console.log(this.diceValues[i]);
+    for (let rolls = 0; rolls < 500; rolls++) {
+      setTimeout(() => {
+        for (let i = 0; i < this.diceValues.length; i++) {
+          this.diceValues[i].value = Math.floor(Math.random() * 6) + 1;
+          this.diceValues[i].imagePath =
+            this.diceImages[this.diceValues[i].value - 1];
+        }
+      }, 100);
     }
   }
 }
