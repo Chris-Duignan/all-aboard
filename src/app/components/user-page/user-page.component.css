@@ -1,17 +1,42 @@
-.userProfile {
-  text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #b8a9c9;
+@media (min-width: 300px) and (max-width: 1024px) {
+  h2 {
+    letter-spacing: 0px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 20;
+    font-size: 20px;
+    margin-top: 20px;
+  } 
+  
+  .userProfile {
+    border: 10px solid #622569;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: #b8a9c9;
+  }
+
+  .formButton {
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #d6d4e0;
+    color: black;
+    border: none;
+  }
+
+  .formButton:hover {
+  background-color: #a14faa;
+  font-size: 25px;
+  }
+  .dice {
+    background-color: none;
+    border: none;
+    font-size: 20px;
+  }
 }
 
-.formButton {
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: #d6d4e0;
-  color: black;
-  border: none;
-}

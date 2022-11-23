@@ -29,7 +29,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { MapComponent } from './components/map/map.component';
-import { DiceComponent } from './components/dice/dice.component';//angular icons
+import { DiceComponent } from './components/dice/dice.component';
 
 @NgModule({
   declarations: [

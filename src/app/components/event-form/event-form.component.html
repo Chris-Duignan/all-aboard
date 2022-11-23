@@ -1,12 +1,10 @@
-<section>
+<section class="createEvent">
   <section [hidden]="submitted">
     <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
       <img
-        style="width: 200px; border: 1px solid black"
         src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
       />
-      <p>-- Location map to go here --</p>
-      <label for="title">Event title: </label>
+      <label for="title">Event Title</label>
       <input
         type="text"
         id="title"
@@ -15,15 +13,20 @@
         name="title"
       />
       <br />
-      <label for="description">Write a brief description of your event</label>
+      <label for="area">Area</label>
+      <input type="text" id="text" required [(ngModel)]="model.area" name="area"
+      />
+  
+        <br />
+      <label for="description">Event Description</label>
       <textarea
         id="description"
         required
         [(ngModel)]="model.description"
         name="description"
       ></textarea>
-      <br />
-      <label for="date">Date: </label>
+    <br />
+      <label for="date">When</label>
       <input
         type="date"
         id="date"
@@ -33,7 +36,7 @@
       />
 
       <br />
-      <label for="start_time">Time:</label>
+      <label for="start_time">Time</label>
       <input
         type="time"
         id="time"
@@ -43,8 +46,16 @@
       />
 
       <br />
+      <label for="duration">Duration In Mins <sup>(optional)</sup></label>
+      <input type="number" id="number" [(ngModel)]="model.duration" name="duration"
+      />
+      <br />
+      <label for="max_players">Max Players</label>
+      <!-- <input type="number" id="number" [(ngModel)]="model.max_players" name="max_players" -->
+      />
+      <br />
       <fieldset>
-        <legend>Willing to teach</legend>
+        <legend>Teacher Available</legend>
         <label>
           Yes
           <input
@@ -69,7 +80,7 @@
         </label>
       </fieldset>
       <fieldset>
-        <legend>Public/Private event</legend>
+        <legend>Event Visibility</legend>
         <label>
           Public
           <input

@@ -7,6 +7,12 @@
   section {
     min-width: 100%;
   }
+  .dice {
+    padding: 0px;
+    margin: 0px;
+    font-size: 30px;
+    border: none;
+  }
 }
 
 .navButton {
@@ -44,3 +50,4 @@ nav {
   margin-bottom: 35px;
   max-width: 50px;
 }
+
