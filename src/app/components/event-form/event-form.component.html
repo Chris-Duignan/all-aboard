@@ -1,11 +1,9 @@
 <section>
   <section [hidden]="submitted">
     <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
-      <app-map
-      (myOutputValue)="saveLocation($event)"
-      ></app-map>
+      <app-map (myOutputValue)="saveLocation($event)"></app-map>
       <p>-- Location map to go here --</p>
-      <label for="title">Event title: </label>
+      <label for="title">Event Title</label>
       <input
         type="text"
         id="title"
@@ -15,10 +13,15 @@
       />
       <br />
       <label for="area">Area</label>
-      <input type="text" id="text" required [(ngModel)]="model.area" name="area"
+      <input
+        type="text"
+        id="text"
+        required
+        [(ngModel)]="model.area"
+        name="area"
       />
-  
-        <br />
+
+      <br />
       <label for="description">Event Description</label>
       <textarea
         id="description"
@@ -26,7 +29,7 @@
         [(ngModel)]="model.description"
         name="description"
       ></textarea>
-    <br />
+      <br />
       <label for="date">When</label>
       <input
         type="date"
@@ -45,14 +48,13 @@
         [(ngModel)]="model.start_time"
         name="start_time"
       />
-
       <br />
-      <label for="duration">Duration In Mins <sup>(optional)</sup></label>
-      <input type="number" id="number" [(ngModel)]="model.duration" name="duration"
-      />
-      <br />
-      <label for="max_players">Max Players</label>
-      <!-- <input type="number" id="number" [(ngModel)]="model.max_players" name="max_players" -->
+      <label for="duration">Duration In Mins<sup>(optional)</sup></label>
+      <input
+        type="number"
+        id="number"
+        [(ngModel)]="model.duration"
+        name="duration"
       />
       <br />
       <fieldset>
@@ -107,7 +109,7 @@
       </fieldset>
       <br /><br />
       <button type="submit" [disabled]="!eventForm.form.valid">
-        Add New Event
+        Add Event
       </button>
       <button type="button" (click)="newMeet(); eventForm.reset()">
         Reset

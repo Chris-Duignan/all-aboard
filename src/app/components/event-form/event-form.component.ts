@@ -28,9 +28,9 @@ export class EventFormComponent {
     '',
     '',
     0 /* This is the user id, we need this from auth*/,
-    0,
     true,
     false,
+    0,
     ''
   );
   saveLocation(eventInfo: any) {
@@ -48,9 +48,9 @@ export class EventFormComponent {
       '',
       '',
       0 /* This is the user id, we need this from auth*/,
-      0,
       true,
       false,
+      0,
       ''
     );
   }

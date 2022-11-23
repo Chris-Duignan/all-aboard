@@ -8,9 +8,9 @@ export class Meet {
         public date: string,
         public start_time: string,
         public user_id: number,
-        public duration: number,
         public visibility: boolean,
         public willing_to_teach: boolean,
+        public duration?: number,
         public description?: string,
     ) {}
 }
