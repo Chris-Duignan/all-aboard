@@ -1,5 +1,5 @@
 <section>
-  <section [hidden]="submitted">
+  <section>
     <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
       <app-map (myOutputValue)="saveLocation($event)"></app-map>
       <p>-- Location map to go here --</p>
@@ -115,8 +115,5 @@
         Reset
       </button>
     </form>
-  </section>
-  <section [hidden]="!submitted">
-    <h2>Your Event Has Been Posted!</h2>
   </section>
 </section>
