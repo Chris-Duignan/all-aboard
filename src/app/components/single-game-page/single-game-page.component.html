@@ -6,6 +6,10 @@
     <br>
     <p class="players">Players: {{game.min_players}} - {{game.max_players}}</p>
     <a class="rules" href={{game.rules_url}}>Rules</a>
-    <br>
-    <button class="addToGames" (click)="postGameToUserGames()">+</button>
+    <br/>
+    <section>
+        <br/>
+        Add to favourites 
+        <button class="addToGames" (click)="postGameToUserGames()">+</button>
+    </section>
 </div>
