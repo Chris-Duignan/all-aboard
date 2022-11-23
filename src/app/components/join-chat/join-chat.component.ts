@@ -37,7 +37,6 @@ export class JoinChatComponent implements OnInit {
 
       this.Events.getEventsByUserId(this.state.getUser().user_id)
       .subscribe((data) => {
-        console.log(data)
         this.events = data;
 
       })
