@@ -1,10 +1,11 @@
 .map-container {
     height: 25rem;
     margin: 30px;
-  }
   
+}  
   .map-frame {
-    border: 2px solid black;
+    border: 5px solid #5b9aa0;
+    border-radius: 10px;
     height: 100%;
   }
   
