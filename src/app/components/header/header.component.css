@@ -1,10 +1,9 @@
-@media (min-width: 300px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   header {
-    border: 0;
-    margin: 0;
-    padding: 0;
+    height: 100px;
+    max-width: 100%;
+    background-color: #5b9aa0;
   }
-
   h1 {
     padding-top: 10px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -14,9 +13,19 @@
     letter-spacing: 2px;
   }
 }
-
-header {
-  height: 100px;
-  max-width: 100%;
-  background-color: #5b9aa0;
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100px;
+    max-width: 100%;
+    background-color: #5b9aa0;
+  }
+  h1 {
+    padding-top: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
 }

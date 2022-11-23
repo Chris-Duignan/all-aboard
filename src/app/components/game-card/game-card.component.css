@@ -3,35 +3,35 @@
   .gameContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     background-color: white;
-    margin-top: 15px;
     border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 30px;
+    box-shadow: 5px 5px 5px 5px #5b9aa0;
   }
 
   /* Description of game */
   .gameBrief {
     text-align: center;
+    letter-spacing: 0.5px;
     font-weight: 10;
     font-size: 20px;
-    margin-top: 10px;
+    margin: 13px;
   }
 
   /* Each game includes img */
   .gamesCard {
     display: flex;
     list-style-type: none;
-    margin-bottom: 5px;
   }
 
   img {
     border-radius: 10px;
     max-width: 100px;
-    max-height: 180px;
-    margin-top: 10px;
+    max-height: 150px;
+    margin-top: 50px;
     margin-left: 10px;
   }
 
@@ -40,7 +40,7 @@
     font-size: 30px;
     cursor: pointer;
     float: inline-end;
-    margin-left: 100px;
+    margin-left: 130px;
     margin-top: 0px;
     border-radius: 10px;
     align-self: center;
@@ -58,7 +58,7 @@
     margin-bottom: 10px;
   }
 }
-/* 
+/* Large Screens */
 @media screen and (min-width: 1024px) {
   .gamesCard {
     display: flex;
@@ -66,35 +66,33 @@
     border-radius: 10px;
     width: 500px;
   }
-}
-.gameContainer {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-weight: 10;
-  font-size: 20px;
-  display: flex;
-  background-color: white;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  max-width: 450px;
-  border-radius: 10px;
-}
+  .gameContainer {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 10;
+    font-size: 20px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    max-width: 450px;
+    border-radius: 10px;
+  }
 
-
-
-.addToGames {
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  float: inline-end;
-  margin-left: 60px;
-  margin-top: 0px;
-  border-radius: 10px;
+  .addToGames {
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    float: inline-end;
+    margin-left: 60px;
+    margin-top: 0px;
+    border-radius: 10px;
+  }
+  .addToGames:hover {
+    color: purple;
+    font-size: 50px;
+  }
 }
-.addToGames:hover {
-  color: purple;
-  font-size: 50px;
-} */

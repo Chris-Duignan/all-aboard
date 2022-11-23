@@ -1,24 +1,57 @@
-.singleCard {
-  list-style-type: none;
-  text-align: center;
-  border-radius: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  line-height: 30px;
-  margin: 20px;
-  padding: 10px;
-  max-width: 400px;
-  background-color: #b8a9c9;
-  box-shadow: 5px 8px 5px #5b9aa0;
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+  .border {
+    border: 10px solid #622569;
+  }
+  .singleCard {
+    list-style-type: none;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    margin: 20px;
+    padding: 10px;
+    max-width: 400px;
+    background-color: #b8a9c9;
+    box-shadow: 5px 8px 5px #5b9aa0;
+  }
+  button {
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 30px;
+  }
+  button:hover {
+    color: #622569;
+    font-size: 50px;
+  }
 }
-button {
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  width: 30px;
-}
-button:hover {
-  color: #622569;
-  font-size: 50px;
+
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  .singleCard {
+    list-style-type: none;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    margin: 20px;
+    padding: 10px;
+    max-width: 400px;
+    background-color: #b8a9c9;
+    box-shadow: 5px 8px 5px #5b9aa0;
+  }
+  button {
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 30px;
+  }
+  button:hover {
+    color: #622569;
+    font-size: 50px;
+  }
 }

@@ -1,15 +1,14 @@
-
 <div class="border">
-    <h3 class="title">{{formattedName}}</h3>
-    <img class="img" src={{game.image_url}} />
-    <p class="desc" style="white-space: pre-line">{{game.description}}</p>
-    <br>
-    <p class="players">Players: {{game.min_players}} - {{game.max_players}}</p>
-    <a class="rules" href={{game.rules_url}}>Rules</a>
-    <br/>
-    <section>
-        <br/>
-        Add to favourites 
-        <button class="addToGames" (click)="postGameToUserGames()">+</button>
-    </section>
+  <h3 class="title">{{ formattedName }}</h3>
+  <img class="img" src="{{ game.image_url }}" />
+  <p class="desc" style="white-space: pre-line">{{ game.description }}</p>
+  <br />
+  <p class="players">
+    Players: {{ game.min_players }} - {{ game.max_players }}
+  </p>
+  <a class="rules" href="{{ game.rules_url }}">Rules</a>
+  <section class="addToFaves">
+    <br />Add To Favourites
+    <button class="addToGames" (click)="postGameToUserGames()">+</button>
+  </section>
 </div>
