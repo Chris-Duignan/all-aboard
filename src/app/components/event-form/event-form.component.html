@@ -1,6 +1,6 @@
 <section>
-  <section [hidden]="submitted">
-    <h3>Select A Location On The Map Below For Your Event</h3>
+  <!-- <section [hidden]="submitted"> -->
+    <h3>Select A Location On The Map Below</h3>
   <section>
     <form (ngSubmit)="postMeet(model)" #eventForm="ngForm">
       <app-map (myOutputValue)="saveLocation($event)"></app-map>
@@ -11,7 +11,7 @@
         required
         [(ngModel)]="model.title"
         name="title"
-        placeholder="event name"
+       
       />
       <br />
       <label for="area">Area</label>
@@ -24,7 +24,7 @@
       />
 
       <br />
-      <label for="description">Event Description</label>
+      <label for="description">Description</label>
       <textarea
         id="description"
         required
