@@ -1,7 +1,7 @@
 <main class="border">
   <li class="singleCard">
     <h2>{{ meet.title }}</h2>
-    <p>{{ meet.description }}</p>
+    <p class="desc">{{ meet.description }}</p>
     <p>Where: {{ meet.area }}</p>
     <p>When: {{ formatDate }}</p>
     <p>Time: {{ meet.start_time.slice(0, 5) }}</p>
@@ -9,7 +9,8 @@
     <p>Duration: {{ meet.duration }} mins</p>
     <p>Visibility: {{ meet.visibility }}</p>
     <p>Teacher Available: {{ meet.willing_to_teach }}</p>
-    <p>Games Provided: {{ meet.games.join(", ") }}</p>
+    <h3>Games Provided:</h3>
+    <p>{{ meet.games.join(", ") }}</p>
     <h3>Who's Attending:</h3>
     <p *ngFor="let guest of meet.guests">{{ guest.username }}</p>
     <section>

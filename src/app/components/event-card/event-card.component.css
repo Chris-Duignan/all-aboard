@@ -16,14 +16,19 @@
     list-style: none;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  h3 {
+    padding-bottom: 10px;
   }
 
   button {
-    border: none;
     font-size: 30px;
-    cursor: pointer;
+    border: none;
     border-radius: 10px;
     width: 30px;
+    cursor: pointer;
   }
   button:hover {
     color: #622569;
@@ -34,6 +39,7 @@
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     margin-left: 10px;
+    padding-bottom: 10px;
   }
 }
 /* Large Screens */
