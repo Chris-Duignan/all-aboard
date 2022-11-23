@@ -53,7 +53,7 @@ export class JoinChatComponent implements OnInit {
       this._router.navigate(['/chat'], {
       relativeTo: this._route,
       queryParams: {
-        user: `${this.state.getUser().user_id}`,
+        user: `${this.state.getUser().username}`,
         room: `${this.roomName}`,
         date: `${this.eventDate}`
       },
