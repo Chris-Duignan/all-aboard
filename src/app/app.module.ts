@@ -33,7 +33,8 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { JoinChatComponent } from './components/join-chat/join-chat.component';
 import { ChatCardComponent } from './components/chat-card/chat-card.component'; //angular icons
 import { MapComponent } from './components/map/map.component';
-import { DiceComponent } from './components/dice/dice.component';//angular icons
+import { DiceComponent } from './components/dice/dice.component';
+import { AddGamesToEventComponent } from './components/add-games-to-event/add-games-to-event.component';//angular icons
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { DiceComponent } from './components/dice/dice.component';//angular icons
     ChatCardComponent,
     MapComponent,
     DiceComponent,
+    AddGamesToEventComponent,
   ],
   imports: [
     BrowserModule,
