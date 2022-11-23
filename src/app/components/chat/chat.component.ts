@@ -119,6 +119,7 @@ export class ChatComponent implements OnInit {
       return msg;
       // if(this.messageList.includes(msg)){
       //   return msg;
+      
       // }
     })
 
