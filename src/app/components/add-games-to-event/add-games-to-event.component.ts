@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Game } from 'src/app/classes/game';
 import { GamesService } from 'src/app/services/games/games.service';
 
@@ -11,12 +11,33 @@ import { GamesService } from 'src/app/services/games/games.service';
 export class AddGamesToEventComponent implements OnInit {
   isLoading = false;
   games: Game[] = [];
+  search: string = '';
 
-  constructor(private gamesService: GamesService) {}
+  constructor(
+    private gamesService: GamesService,
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
     this.isLoading = true;
     this.getGames();
+  }
+
+  filter() {
+    if (this.search === '') {
+      return;
+    }
+    this.games = this.games.filter((game) => {
+      return game.name.includes(this.search);
+    });
+    this._router.navigate([], {
+      relativeTo: this._route,
+      queryParams: {
+        search: this.search,
+      },
+      queryParamsHandling: 'merge',
+    });
   }
 
   getGames(): void {
