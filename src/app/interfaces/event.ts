@@ -5,15 +5,17 @@ export interface Meets {
 export interface Meet {
     event_id: number,
     title: string,
-    latitude: string,
-    longitude: string,
+    latitude: any,
+    longitude: any,
+    description: string | null,
     area: string,
     date: string,
     start_time: string,
     duration: number,
-    organiser: number,
-    guests: null,
-    games: null,
+    organiser: string,
     visibility: boolean,
     willing_to_teach: boolean
+    max_players: number,
+    guests: {user_id: number, username: string}[],
+    games: string[],
 }

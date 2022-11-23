@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +32,8 @@ import { SingleGamePageComponent } from './components/single-game-page/single-ga
 import { LoadingComponent } from './components/loading/loading.component';
 import { JoinChatComponent } from './components/join-chat/join-chat.component';
 import { ChatCardComponent } from './components/chat-card/chat-card.component'; //angular icons
+import { MapComponent } from './components/map/map.component';
+import { DiceComponent } from './components/dice/dice.component';//angular icons
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { ChatCardComponent } from './components/chat-card/chat-card.component'; 
     LoadingComponent,
     JoinChatComponent,
     ChatCardComponent,
+    MapComponent,
+    DiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,7 @@ import { ChatCardComponent } from './components/chat-card/chat-card.component'; 
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     FontAwesomeModule,
-    GoogleMapsModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent],

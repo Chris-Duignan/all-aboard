@@ -1,18 +1,21 @@
+main {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #622569;
+}
+
 .eventsHeading {
-  text-align: center;
+  letter-spacing: 0px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
   text-transform: uppercase;
-  padding: 10px;
-  letter-spacing: 4px;
-  font-size: 50px;
-  font-weight: 100;
-  color: #622569;
-  font-style: italic;
+  font-weight: 20;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .eventList {
-  display: flex;
   justify-content: space-around;
 }
 

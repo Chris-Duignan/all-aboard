@@ -1,5 +1,5 @@
 <main class="gamesPage">
-  <h2>Browse Games & Add Favourites to your Profile</h2>
+  <h2>View Games & Add Your Favourites</h2>
   <app-loading *ngIf="isLoading"></app-loading>
   <ul class="gameCard" *ngIf="!isLoading">
     <app-game-card *ngFor="let game of games" [game]="game"> </app-game-card>
