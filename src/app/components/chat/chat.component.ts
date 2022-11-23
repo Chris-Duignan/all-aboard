@@ -104,6 +104,7 @@ export class ChatComponent implements OnInit {
 
 
   recieveMessages(messages:any){
+    console.log(messages)
     if(!messages.length){
       localStorage.setItem(`messages.${this.roomName}`, '')
     }

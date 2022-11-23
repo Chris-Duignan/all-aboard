@@ -43,7 +43,7 @@ const routes: Routes = [
 
   { path: 'events/:event_id', component: EventSinglePageComponent },
   { path: 'games', component: GamesPageComponent },
-  { path: 'games/:game_id', component: SingleGamePageComponent }
+  { path: 'games/:game_id', component: SingleGamePageComponent },
   { path: 'games/:game_id', component: SingleGamePageComponent },
   { path: 'join-chat', component: JoinChatComponent },
   { path: 'chat', component: ChatComponent },

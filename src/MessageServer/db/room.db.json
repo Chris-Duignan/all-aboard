@@ -1,1 +1,35 @@
-{"roomDB":[{"roomName":"newRoom","endDate":"newRoom.endDate","members":[],"messageList":[]},{"roomName":"Be There or Be Square","endDate":"2021-01-18T00:00:00.000Z","members":[],"messageList":[{"message":"hi","username":"tess","my":false,"liked":false,"bot":false,"time":"15:33 pm"},{"message":"hi","username":"tess","my":false,"liked":false,"bot":false,"time":"15:33 pm"},{"message":"hi","username":"tess","my":false,"liked":false,"bot":false,"time":"16:53 pm"},{"message":"(onScrollBoxSet)=\"parentSetScrollBox($event)\"(onScrollBoxSet)=\"parentSetScrollBox($event)\"(onScrollBoxSet)=\"parentSetScrollBox($event)\"(onScrollBoxSet)=\"parentSetScrollBox($event)\"(onScrollBoxSet)=\"parentSetScrollBox($event)\"","username":"tess","my":false,"liked":false,"bot":false,"time":"16:53 pm"},{"message":"hello","username":"tess","my":false,"liked":false,"bot":false,"time":"17:2 pm"},{"message":"cljsdncvsdkjvcnskjvcn","username":"tess","my":false,"liked":false,"bot":false,"time":"17:27 pm"},{"message":"kjsdbvkjsdhbv`ldjkshvb`lsdjkhvbl`kdsjvblksdjVB `SKDJVN;K`JSD","username":"tess","my":false,"liked":false,"bot":false,"time":"17:28 pm"},{"message":"hi","username":"tess","my":false,"liked":false,"bot":false,"time":"17:28 pm"},{"message":"tess has joined the chat","bot":true},{"message":"pfffffffff","username":"tess","my":false,"liked":false,"bot":false,"time":"17:35 pm"},{"message":"tess has joined the chat","bot":true},{"message":"hello","username":"tess","my":false,"liked":false,"bot":false,"time":"17:40 pm"},{"message":"tess has joined the chat","bot":true}]},{"roomName":"","endDate":"2021-01-18T00:00:00.000Z","members":[],"messageList":[{"message":"tess has joined the chat","bot":true}]}]}
+{
+  "roomDB": [
+    {
+      "roomName": "newRoom",
+      "endDate": "newRoom.endDate",
+      "members": [],
+      "messageList": []
+    },
+    {
+      "roomName": "Be There or Be Square",
+      "endDate": "2021-01-18T00:00:00.000Z",
+      "members": [],
+      "messageList": [
+        { "message": "tess has joined the chat", "bot": true },
+        {
+          "message": "plplpl",
+          "username": "tess",
+          "my": false,
+          "liked": false,
+          "bot": false,
+          "time": "10:12 pm"
+        }
+      ]
+    },
+    {
+      "roomName": "",
+      "endDate": "2021-01-18T00:00:00.000Z",
+      "members": [],
+      "messageList": [
+        { "message": "tess has joined the chat", "bot": true },
+        { "message": " has joined the chat", "bot": true }
+      ]
+    }
+  ]
+}
