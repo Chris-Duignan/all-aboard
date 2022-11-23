@@ -58,6 +58,13 @@ export class EventFormComponent {
     model.user_id = this.stateService.getUser().user_id;
     this.eventsService.postEvent(model).subscribe((data) => {
       this.router.navigate([`events/${data.event_id}/addGames`]);
+      this.stateService
+        .getUser()
+        .events.push({
+          name: data.title,
+          event_id: data.event_id,
+          organiser: true,
+        });
     });
   }
 }
