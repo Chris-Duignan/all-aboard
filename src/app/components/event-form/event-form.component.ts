@@ -16,7 +16,6 @@ export class EventFormComponent {
     public router: Router
   ) {}
 
-  submitted = false;
   location: any;
   user: any = this.stateService.getUser();
 
@@ -58,9 +57,14 @@ export class EventFormComponent {
   postMeet(model: any): void {
     model.user_id = this.stateService.getUser().user_id;
     this.eventsService.postEvent(model).subscribe((data) => {
-      console.log(data);
       this.router.navigate([`events/${data.event_id}/addGames`]);
+      this.stateService
+        .getUser()
+        .events.push({
+          name: data.title,
+          event_id: data.event_id,
+          organiser: true,
+        });
     });
-    this.submitted = true;
   }
 }
