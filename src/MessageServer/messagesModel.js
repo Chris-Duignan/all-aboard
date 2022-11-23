@@ -92,14 +92,6 @@ exports.insertUserByRoom = (username, roomName) => {
                 room.members.push(username)
             }
         })
-
-        // const newDb = db.roomDB.map((room) => {
-        //     if(room.roomName === roomName){
-        //         room.members = members;
-        //         return
-        //     }
-        // })
-        
         af.set(data, (err) => {
             if(err)
             console.log(err)

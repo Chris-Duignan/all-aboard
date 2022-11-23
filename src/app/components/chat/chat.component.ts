@@ -32,7 +32,9 @@ export class ChatComponent implements OnInit {
     liked?: boolean, 
     bot: boolean
     time?: any
+
   }[]=[{message:'', bot: true}];
+
   displayMessages: {
     message: string, 
     username?: string, 
@@ -115,11 +117,10 @@ export class ChatComponent implements OnInit {
         return message;
     })
     this.messageList = this.displayMessages.filter((msg:any) => {
-      // console.log(msg)
+
+
       return msg;
-      // if(this.messageList.includes(msg)){
-      //   return msg;
-      // }
+
     })
 
     localStorage.setItem(`messages.${this.roomName}`, JSON.stringify(this.displayMessages))
