@@ -11,6 +11,10 @@ export class MarkerService {
 
   constructor(private eventsService: EventsService, private popupService: PopupService) {}
 
+  makeMarkerOnClick(map: L.Map, latlng: {lat: number, lng: number}): void {
+    const marker = L.marker([latlng.lat, latlng.lng])
+    marker.addTo(map);
+  }
   makeMarkers(map: L.Map): void {
       this.eventsService.getEvents().subscribe((meets) => {
         meets.map((meet) => {
