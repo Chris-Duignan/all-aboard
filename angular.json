@@ -24,7 +24,7 @@
             "assets": [
               "src/totoro-transparent-gif-19.png",
               "src/assets",
-              "src/redirects"
+              "src/redirects",
               {
                 "glob": "**/*",
                 "input": "node_modules/leaflet/dist/images/",
