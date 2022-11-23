@@ -7,7 +7,7 @@
         </section>
         <app-messages [messageList]="messageList"></app-messages>
         <div class="message-input">
-            <input type="text" [(ngModel)]="message">
+            <input type="text" (keydown.enter)="sendMessage()" [(ngModel)]="message">
             <button (click)="sendMessage()">Send</button>
         </div>
 </main>
