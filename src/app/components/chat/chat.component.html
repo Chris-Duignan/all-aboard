@@ -1,0 +1,13 @@
+<main (scrollBox)="setScrollBox($event)" class="container">
+        <section class="main-info">
+            <h2>{{ room.roomName }}</h2><button (click)="view()" class="user-btn">Members</button>
+            <div class="user-list" [ngStyle]="{'visibility': (usersView) ? 'visible' : 'hidden'}">
+                <h3 *ngFor="let user of userList">{{ user }}</h3>
+            </div>
+        </section>
+        <app-messages [messageList]="messageList"></app-messages>
+        <div class="message-input">
+            <input type="text" [(ngModel)]="message">
+            <button (click)="sendMessage()">Send</button>
+        </div>
+</main>
