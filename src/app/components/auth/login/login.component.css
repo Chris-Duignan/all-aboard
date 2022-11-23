@@ -9,7 +9,7 @@
   }
 
   .form {
-    margin: auto; 
+    margin: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -29,6 +29,7 @@
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-align: center;
+    margin-top: 30px;
   }
 
   .formButton {
@@ -46,7 +47,7 @@
 
   .logInTitle {
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     word-spacing: 3px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -54,7 +55,8 @@
     text-transform: uppercase;
     font-weight: 10;
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .createAccountText {
@@ -69,65 +71,79 @@
     font-size: 20px;
   }
 }
-/* 
-.createAccountText {
-  color: white;
-  letter-spacing: 4px;
-  word-spacing: 3px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 10;
-  font-size: 20px;
-} */
 
-/* .main-div {
-  background-color: #622569;
-  padding: 20px;
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 10px;
-  max-width: 350px;
-} */
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  .createAccountText {
+    color: white;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 10;
+    font-size: 20px;
+  }
 
-/* .input {
-  flex-wrap: wrap;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  font-size: 20px;
-  text-align: center;
-} */
+  .main-div {
+    background-color: #622569;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    max-width: 350px;
+  }
 
-/* .noAccountText {
-  color: white;
-  font-weight: 100;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
+  .input {
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .noAccountText {
+    color: white;
+    font-weight: 100;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  .formButton {
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #d6d4e0;
+    color: black;
+    border: none;
+  }
+
+  .logInTitle {
+    color: white;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 10;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .createAccountText {
+    color: white;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 10px;
+    font-size: 20px;
+  }
 }
-
-.formButton {
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: #d6d4e0;
-  color: black;
-  border: none;
-}
-
-.logInTitle {
-  color: white;
-  letter-spacing: 4px;
-  word-spacing: 3px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 10;
-  font-size: 20px;
-  margin-bottom: 20px;
-} */

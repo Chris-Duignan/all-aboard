@@ -1,6 +1,12 @@
 <main class="gamesPage">
-  <h2>View Games & Add Your Favourites</h2>
-  <section class="search-div"><input placeholder="Search" (keydown.enter)="filter()" [(ngModel)]="search"><button (click)="filter()">Go</button></section>
+  <h2>Browse Games & Add Favourites</h2>
+  <section class="search-div">
+    <input
+      placeholder="Search"
+      (keydown.enter)="filter()"
+      [(ngModel)]="search"
+    /><button (click)="filter()">Go</button>
+  </section>
   <app-loading *ngIf="isLoading"></app-loading>
   <ul class="gameCard" *ngIf="!isLoading">
     <app-game-card *ngFor="let game of games" [game]="game"> </app-game-card>

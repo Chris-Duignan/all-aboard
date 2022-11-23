@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .border {
     border: 10px solid #622569;
     display: flex;
@@ -15,34 +15,36 @@
     margin-top: 20px;
   }
   .img {
-    /* width: 80%; */
-    /* height: 200px; */
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px;
   }
 
   .desc {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    border: 5px solid #5b9aa0;
+    border: 8px solid #5b9aa0;
+    border-radius: 10px;
     padding: 20px;
     margin: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
   }
   .players {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-align: center;
+    letter-spacing: 2px;
   }
   .rules {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-decoration: none;
-    color: black;
-    background-color: grey;
+    background-color: #622569;
     width: 60px;
     color: white;
-    padding: 5px;
+    padding: 8px;
+    letter-spacing: 2px;
     border-radius: 10px;
     margin-left: 160px;
     margin-top: 20px;
@@ -51,15 +53,91 @@
   section {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
     align-self: center;
-    }
+    margin-top: 0px;
+  }
 
   .addToGames {
     border: none;
     font-size: 30px;
     cursor: pointer;
-    /* float: inline-end; */
-    /* margin-left: 100px; */
+    margin-top: 0px;
+    border-radius: 10px;
+    align-self: center;
+    width: 40px;
+    margin-bottom: 20px;
+  }
+  .addToGames:hover {
+    color: purple;
+    font-size: 50px;
+  }
+}
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  .border {
+    border: 10px solid #622569;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .img {
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+  .desc {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    border: 8px solid #5b9aa0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+  }
+  .players {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .rules {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: #622569;
+    width: 60px;
+    color: white;
+    padding: 8px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    margin-left: 160px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  section {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    align-self: center;
+    margin-top: 0px;
+  }
+
+  .addToGames {
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
     margin-top: 0px;
     border-radius: 10px;
     align-self: center;
