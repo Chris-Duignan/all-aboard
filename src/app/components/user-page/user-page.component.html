@@ -5,18 +5,14 @@
   <h3>My Games</h3>
   <br />
   <ul class="list">
-    <li *ngFor="let game of user.games" routerLink="{{'/games/'+game.game_id}}"><p>{{game.game_title}}</p><img src="{{game.image_url}}" />
+    <li *ngFor="let game of user.games" routerLink="{{'/games/'+game.game_id}}"><p>{{formatGameName(game.game_title)}}</p><br />
     </li>
 </ul>
   <br />
-  <h3>My Groups</h3>
-  <br />
-<p>get groups into here</p>
-<br/>
   <h3>My Events</h3>
   <br />
   <ul class="list">
-  <li *ngFor="let event of user.events" routerLink="{{'/events/'+event.event_id}}"><p>{{event.name}}</p></li>
+  <li *ngFor="let event of user.events" routerLink="{{'/events/'+event.event_id}}"><p>{{event.name}}</p><br /></li>
 </ul>
 <br/>
   <button class="formButton" (click)="goToCreateEvent()">Create New Event</button>
