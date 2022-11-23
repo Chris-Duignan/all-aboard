@@ -1,9 +1,25 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(3, 20%);
+  grid-template-rows: repeat(3, 33%);
+  margin: 0;
+  padding: 0;
 }
 
 img {
-  width: 100%;
+  width: 100;
+}
+
+button {
+  text-align: center;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: 10%;
+}
+button:hover {
+  color: #622569;
+  font-size: 50px;
 }
