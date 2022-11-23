@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { EventsService } from 'src/app/services/events/events.service';
 import { StateService } from 'src/app/services/state/state.service';
 import { Meet } from '../../classes/event';
@@ -9,30 +9,34 @@ import { Meet } from '../../classes/event';
   styleUrls: ['./event-form.component.css'],
 })
 export class EventFormComponent {
-
-  constructor(private eventsService: EventsService, private stateService: StateService) {}
+  constructor(
+    private eventsService: EventsService,
+    private stateService: StateService
+  ) {}
 
   submitted = false;
-  location: any
-  currentUserId: any = this.stateService.getUser().user_id
-  
+  location: any;
+  user: any = this.stateService.getUser();
+
   model = new Meet(
     '',
-    '12.35',
-    '34.1',
+    '',
+    '',
     'Manchester',
     '',
     '',
-    2 /* This is the user id, we need this from auth*/,
+    0, /* This is the user id, we need this from auth*/
     0,
     true,
     false,
     ''
   );
-saveLocation(eventInfo: any){
-  this.location = eventInfo
-  console.log('in form land', this.location)
-}
+  saveLocation(eventInfo: any) {
+    this.location = eventInfo;
+    this.model.latitude=this.location.lat.toString();
+    this.model.longitude=this.location.lng.toString();
+    console.log('in form land', this.location.lat);
+  }
   newMeet() {
     this.model = new Meet(
       '',
@@ -41,7 +45,7 @@ saveLocation(eventInfo: any){
       'Manchester',
       '',
       '',
-      2 /* This is the user id, we need this from auth*/,
+      0, /* This is the user id, we need this from auth*/
       0,
       true,
       false,
@@ -49,9 +53,10 @@ saveLocation(eventInfo: any){
     );
   }
 
-  
-  postMeet(model: any):void {
-    this.eventsService.postEvent(model).subscribe()
+  postMeet(model: any): void {
+    model.user_id = this.stateService.getUser().user_id
+    this.eventsService.postEvent(model).subscribe();
     this.submitted = true;
   }
+
 }

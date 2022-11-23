@@ -12,7 +12,7 @@ export interface Meet {
     date: string,
     start_time: string,
     duration: number,
-    organiser: string,
+    user_id: string,
     visibility: boolean,
     willing_to_teach: boolean
     max_players: number,

@@ -2,8 +2,6 @@ import { Component, AfterViewInit, Input } from '@angular/core';
 import * as L from "leaflet"
 import { MarkerService } from 'src/app/services/markers/marker.service';
 import { Output, EventEmitter } from '@angular/core';
-import { threadId } from 'worker_threads';
-
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -43,7 +41,6 @@ lastClick: any
       minZoom: 1,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-
     tiles.addTo(this.map);
   }
 
@@ -53,9 +50,8 @@ lastClick: any
     this.initMap();
     this.markerService.makeMarkers(this.map)
     this.map.on("click", (e: any) => {
-    
       this.myOutputValue.emit(e.latlng)
-     
+      this.markerService.makeMarkerOnClick(this.map, e.latlng)
     })
 
     
