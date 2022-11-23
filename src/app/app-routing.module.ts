@@ -13,10 +13,11 @@ import {
 } from '@angular/fire/auth-guard';
 import { EventSinglePageComponent } from './components/event-single-page/event-single-page.component';
 import { GamesPageComponent } from './components/games-page/games-page.component';
-import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component'
+import { SingleGamePageComponent } from './components/single-game-page/single-game-page.component';
 import { JoinChatComponent } from './components/join-chat/join-chat.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { DiceComponent } from './components/dice/dice.component';
+import { AddGamesToEventComponent } from './components/add-games-to-event/add-games-to-event.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'sign-up', pathMatch: 'full' },
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'join-chat', component: JoinChatComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'dice', component: DiceComponent },
+  { path: 'events/:event_id/addGames', component: AddGamesToEventComponent },
 ];
 
 @NgModule({

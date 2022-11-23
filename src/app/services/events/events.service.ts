@@ -46,4 +46,10 @@ export class EventsService {
       user_id: user_id,
     });
   }
+
+  postGameToEvent(event_id: number, game_id: number): Observable<Object> {
+    return this.http.post(this.eventsUrl + `/${event_id}/games`, {
+      game_id: game_id,
+    });
+  }
 }
