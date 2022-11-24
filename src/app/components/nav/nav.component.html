@@ -1,8 +1,8 @@
 <nav>
-  <button class="navButton" routerLink="/user">Profile</button>
-  <button class="navButton" routerLink="/events">Events</button>
-  <button class="navButton" routerLink="/games">Games</button>
-  <button class="navButton" routerLink="/join-chat">Chat</button>
+  <button [ngClass]="importantBit === 'user' ? 'highlightedNavButton' : 'navButton'" routerLink="/user">Profile</button>
+  <button [ngClass]="importantBit === 'events' ? 'highlightedNavButton' : 'navButton'" routerLink="/events">Events</button>
+  <button [ngClass]="importantBit === 'games' ? 'highlightedNavButton' : 'navButton'" routerLink="/games">Games</button>
+  <button [ngClass]="importantBit === 'chat' ? 'highlightedNavButton' : 'navButton'" routerLink="/join-chat">Chat</button>
   <button class="dice" routerLink="/dice">🎲</button>
   <button class="signOut" (click)="signOut()">Sign Out</button>
 </nav>
