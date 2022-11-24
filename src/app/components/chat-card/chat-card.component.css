@@ -1,47 +1,43 @@
-.event-card{
-    align-items: center;
-    width:90%;
-    margin:auto;
-    display:flex;
-    flex-direction: row;
-    margin-top: 1em;
-    background-color: white;
-    padding: 0.5em;
+.event-card {
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  background-color: white;
+  padding: 0.5em;
 }
-/* .event-card:active{
-    border:solid blueviolet;
-    padding:0.4em;
-} */
-.event-card >h2{
-    margin-right: 1em;
+.event-card > h2 {
+  margin-right: 1em;
 }
-.event-card > button{
-    min-width: fit-content;
-    max-height: fit-content;
-    height:2em;
-    background-color: rgba(0,0,0,0);
-    border: solid blueviolet;
-    border-radius: 5px;
-    border-width: 1px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    color:blueviolet;
+.event-card > button {
+  min-width: fit-content;
+  max-height: fit-content;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid blueviolet;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: blueviolet;
 }
-.event-card > button:active{
-    color:white;
-    background-color: blueviolet;
+.event-card > button:active {
+  color: white;
+  background-color: blueviolet;
 }
-.title{
-    font-size: x-large;
+.title {
+  font-size: x-large;
 }
-.members-info{
-    background-color: white;
-    display:flex;
-    justify-content: flex-end;
-    width:5.3em;
-    color: blueviolet;
-    position:absolute;
-    margin-top: 4em;
-    margin-left: 0.1em;
-    right:1.1em;
+.members-info {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  width: 5.3em;
+  color: blueviolet;
+  position: absolute;
+  margin-top: 4em;
+  margin-left: 0.1em;
+  right: 1.1em;
 }

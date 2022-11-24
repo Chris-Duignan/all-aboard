@@ -3,98 +3,211 @@
   .gameContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background-color: white;
-    margin-top: 15px;
+
+      background-color: #b8a9c9;
+      box-shadow: 5px 8px 5px #5b9aa0;
+    margin-top: 30px;
     border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
   }
 
   /* Description of game */
   .gameBrief {
     text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 20px;
     font-weight: 10;
+
     font-size: 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   /* Each game includes img */
   .gamesCard {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style-type: none;
-    margin-bottom: 5px;
   }
 
   img {
     border-radius: 10px;
     max-width: 100px;
-    max-height: 180px;
+    max-height: 120px;
     margin-top: 10px;
     margin-left: 10px;
   }
-
   .addToGames {
     border: none;
     font-size: 30px;
     cursor: pointer;
     float: inline-end;
-    margin-left: 100px;
-    margin-top: 0px;
+    margin: auto;
+    margin-top: 5px;
     border-radius: 10px;
     align-self: center;
     width: 40px;
     margin-bottom: 20px;
   }
   .addToGames:hover {
-    color: purple;
-    font-size: 50px;
+    color: #622569;
+    font-size: 40px;
   }
   .gameTitle {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .gameDesc {
+    margin-bottom: 15px;
+  }
+  img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+}
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  /* All plus includes button to add fave games */
+  .gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 10px 5px 5px #5b9aa0;
+    line-height: 25px;
+    width: 350px;
+    height: 500px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 30px;
+  }
+  /* Each game includes img */
+  /* li element */
+  .gamesCard {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    border-radius: 10px;
+  }
+  img {
+    max-width: 150px;
+    margin: auto;
+    padding: 0px;
+  }
+  img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  h3 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
   .gameDesc {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .addToGames {
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 20px;
+    width: 40px;
     margin-bottom: 10px;
   }
-}
-/* 
-@media screen and (min-width: 1024px) {
-  .gamesCard {
-    display: flex;
-    list-style-type: none;
-    border-radius: 10px;
-    width: 500px;
+  .addToGames:hover {
+    color: #622569;
+    font-size: 40px;
   }
 }
-.gameContainer {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-weight: 10;
-  font-size: 20px;
-  display: flex;
-  background-color: white;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  max-width: 450px;
-  border-radius: 10px;
-}
-
-
-
-.addToGames {
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  float: inline-end;
-  margin-left: 60px;
-  margin-top: 0px;
-  border-radius: 10px;
-}
-.addToGames:hover {
-  color: purple;
-  font-size: 50px;
-} */

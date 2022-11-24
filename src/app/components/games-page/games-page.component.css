@@ -1,43 +1,103 @@
-@media (min-width: 300px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .gamesPage {
     display: flex;
     flex-direction: column;
+    border: 10px solid #622569;
+  }
+
+  h2 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .search-div {
+    margin: auto;
+  }
+  .search-div > input {
+    border-radius: 10px;
+    padding: 0.3em;
+    margin-right: 1em;
+    border: solid rebeccapurple;
+  }
+  .search-div > button {
+    background-color: #622569;
+    color: white;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border: none;
+    height: 2em;
+    width: 3em;
+  }
+  input::placeholder {
+    color: #5b9aa0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+  }
+  button {
+    border-radius: 10px;
+    cursor: pointer;
   }
 }
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  .gamesPage {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid #622569;
+  }
+  /* ul element */
+  .gameCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-.gamesPage {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border: 10px solid #622569;
-}
-
-h2 {
-  letter-spacing: 0px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 20;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.search-div{
-  margin:auto;
-}
-.search-div > input{
-  border-radius: 10px;
-  padding:0.3em;
-  margin-right: 1em;
-  border: solid rebeccapurple;
-}
-.search-div > button{
-  background-color: #622569;
-  color: white;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  border: none;
-  height: 2em;
-  width:3em;
+  h2 {
+    letter-spacing: 2px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 20;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .search-div {
+    margin: auto;
+    max-width: 20%;
+  }
+  .search-div > input {
+    border-radius: 10px;
+    padding: 0.6em;
+    margin-right: 1em;
+    border: solid rebeccapurple;
+  }
+  .search-div > button {
+    background-color: #622569;
+    color: white;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    border: none;
+    height: 2em;
+    width: 3em;
+  }
+  button {
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  input::placeholder {
+    color: #5b9aa0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+  }
 }

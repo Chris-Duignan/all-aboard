@@ -37,4 +37,17 @@ export class UserPageComponent implements OnInit {
   goToCreateEvent() {
     this.router.navigate(['createEvent']);
   }
+
+  formatGameName(gameName: string) {
+    return gameName
+      .split('-')
+      .map((word: string) => {
+        if (word[0]) {
+          return word[0].toUpperCase() + word.slice(1);
+        } else {
+          return '-';
+        }
+      })
+      .join(' ');
+  }
 }
