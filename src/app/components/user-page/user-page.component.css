@@ -81,10 +81,11 @@
     letter-spacing: 2px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #5b9aa0;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 20;
-    font-size: 20px;
+    font-weight: 200;
+    font-size: 30px;
     margin-top: 20px;
   }
 
@@ -98,26 +99,28 @@
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     background-color: #b8a9c9;
     padding-bottom: 200px;
+    margin: auto;
   }
 
   .formButton {
-    padding: 15px;
-    margin: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #5b9aa0;
-    color: black;
-    border: none;
-    width: 60%;
-    margin-left: 75px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #5b9aa0;
+    color: #622569;
+    border: none;
+    width: 30%;
   }
 
   .formButton:hover {
-    background-color: #a14faa;
+    background-color: white;
     font-size: 25px;
+    border: 2px solid #5b9aa0;
   }
   .dice {
     background-color: none;
@@ -126,30 +129,30 @@
   }
 
   .gameList {
+    font-weight: 300;
+    letter-spacing: 1px;
+    list-style: none;
+    background-color: #d6d4e0;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px #efefef;
-    background-color: #d6d4e0;
-    padding: 10px;
     width: 70%;
-    list-style: none;
-    margin-left: 45px;
-    padding-top: 15px;
+    margin: auto;
     margin-bottom: 20px;
-    letter-spacing: 1px;
-    font-weight: 300;
+    padding: 10px;
+    padding-top: 15px;
     padding-bottom: 0px;
   }
   .eventList {
+    font-weight: 300;
+    letter-spacing: 1px;
+    list-style: none;
+    background-color: #d6d4e0;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px #efefef;
-    background-color: #d6d4e0;
-    padding: 10px;
     width: 70%;
-    list-style: none;
-    margin-left: 45px;
+    margin: auto;
+    padding: 10px;
     padding-top: 15px;
-    letter-spacing: 1px;
-    font-weight: 300;
     padding-bottom: 0px;
   }
 }

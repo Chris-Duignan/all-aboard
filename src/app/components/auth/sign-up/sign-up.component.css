@@ -62,6 +62,17 @@
 
 /* Large Screens */
 @media screen and (min-width: 1024px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    background-color: #622569;
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    max-width: 350px;
+  }
   .createAccountText {
     color: white;
     letter-spacing: 4px;
@@ -73,20 +84,17 @@
     font-weight: 10;
     font-size: 20px;
   }
-
-  .main-div {
-    background-color: #622569;
-    padding: 20px;
+  .form {
     margin: auto;
-    margin-top: 50px;
-    border-radius: 10px;
-    max-width: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 300px;
   }
-
   .input {
-    flex-wrap: wrap;
-    padding: 15px;
+    padding: 12px;
     margin-bottom: 15px;
+    margin-top: 20px;
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
@@ -97,20 +105,21 @@
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-align: center;
+    margin-top: 20px;
   }
 
   .formButton {
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
     border-radius: 10px;
     font-size: 20px;
     background-color: #d6d4e0;
     color: black;
     border: none;
+    width: 150px;
   }
-
-  .logInTitle {
+  .createAccountText {
     color: white;
     letter-spacing: 4px;
     word-spacing: 3px;
@@ -120,6 +129,7 @@
     text-transform: uppercase;
     font-weight: 10;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
 }
