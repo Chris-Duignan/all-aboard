@@ -9,11 +9,15 @@ import { PopupService } from '../popup.service';
 })
 export class MarkerService {
 
+  marker: any;
   constructor(private eventsService: EventsService, private popupService: PopupService) {}
 
   makeMarkerOnClick(map: L.Map, latlng: {lat: number, lng: number}): void {
-    const marker = L.marker([latlng.lat, latlng.lng])
-    marker.addTo(map);
+    if (this.marker && map.hasLayer(this.marker)) {
+      map.removeLayer(this.marker)
+    }
+    this.marker = L.marker([latlng.lat, latlng.lng])
+    this.marker.addTo(map);
   }
   makeMarkers(map: L.Map): void {
       this.eventsService.getEvents().subscribe((meets) => {
