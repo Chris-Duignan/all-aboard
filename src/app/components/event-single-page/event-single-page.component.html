@@ -10,7 +10,7 @@
     <p>Visibility: {{ meet.visibility }}</p>
     <p>Teacher Available: {{ meet.willing_to_teach }}</p>
     <h3>Games Provided:</h3>
-    <p>{{ meet.games.join(", ") }}</p>
+    <p>{{ this.games.join(", ") }}</p>
     <h3>Who's Attending:</h3>
     <p *ngFor="let guest of meet.guests">{{ guest.username }}</p>
     <section>

@@ -36,12 +36,10 @@
   }
 
   img {
-    /* margin: auto; */
-    border-radius: 10px;
+    padding-top: 10px;
     max-width: 100px;
     max-height: 120px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: auto;
   }
   .addToGames {
     border: none;

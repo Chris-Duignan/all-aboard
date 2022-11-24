@@ -37,11 +37,9 @@ export class StateService {
   }
 
   fetchUserDetails(uid: string) {
-    console.log('fetching user details...');
     this.usersService.getUserIdByUID(uid).subscribe((user_id) => {
       this.usersService.getUser(user_id).subscribe((user) => {
         this.user = { ...user, uid: uid };
-        console.log(this.user);
       });
     });
   }
