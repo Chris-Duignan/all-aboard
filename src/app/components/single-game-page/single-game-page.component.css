@@ -178,3 +178,8 @@
     font-size: 40px;
   }
 }
+.game-container{
+  /* padding-top: 1em;
+  padding-bottom: 1em; */
+  background: radial-gradient(circle, rgba(255,255,255,1) 38%, rgba(121,9,9,0) 90%);
+}
