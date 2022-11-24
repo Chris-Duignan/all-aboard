@@ -1,7 +1,9 @@
 <div class="border">
   <h3 class="title">{{ formattedName }}</h3>
   <div class="container">
-    <img class="img" src="{{ game.image_url }}" />
+    <div class="game-container">
+      <img class="img" src="{{ game.image_url }}" />
+    </div>
     <section class="addToFaves">
       <br />Add To Favourites
       <button class="addToGames" (click)="postGameToUserGames()">+</button>
