@@ -25,18 +25,34 @@ export class GamesPageComponent implements OnInit {
 
   filter(){
     if(this.search=== ''){
-      return
+      this.gamesService.getGames().subscribe((games) => {
+        this.games = games;
+        this.isLoading = false;
+      });
+      this._router.navigate([], {
+        relativeTo: this._route,
+        queryParams: {
+          search: 'null'
+        },
+        queryParamsHandling: 'merge',
+      });
+    } else {
+      this.gamesService.getGames().subscribe((games) => {
+        this.games = games.filter((game) => {
+          return game.name.includes(this.search)
+        })
+        this.isLoading = false;
+      });
+      
+      this._router.navigate([], {
+        relativeTo: this._route,
+        queryParams: {
+          search: this.search
+        },
+        queryParamsHandling: 'merge',
+      });
     }
-    this.games = this.games.filter((game) => {
-      return game.name.includes(this.search)
-    })
-    this._router.navigate([], {
-      relativeTo: this._route,
-      queryParams: {
-        search: this.search
-      },
-      queryParamsHandling: 'merge',
-    });
+    
   }
 
   getGames(): void {
