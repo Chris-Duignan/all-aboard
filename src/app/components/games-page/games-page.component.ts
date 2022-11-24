@@ -21,6 +21,15 @@ export class GamesPageComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true;
     this.getGames();
+
+    this._route.queryParams
+    .subscribe(params => {
+      for(let key in params){
+        if(key === 'search'){
+          this.search = params[key];
+        }
+      }
+    })
   }
 
   filter(){

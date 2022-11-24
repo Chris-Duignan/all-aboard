@@ -106,7 +106,6 @@ export class ChatComponent implements OnInit {
 
 
   recieveMessages(messages:any){
-    console.log(messages)
     if(!messages.length){
       localStorage.setItem(`messages.${this.roomName}`, '')
     }
@@ -117,13 +116,7 @@ export class ChatComponent implements OnInit {
         return message;
     })
     this.messageList = this.displayMessages.filter((msg:any) => {
-
-
       return msg;
-      // if(this.messageList.includes(msg)){
-      //   return msg;
-      
-      // }
     })
 
     localStorage.setItem(`messages.${this.roomName}`, JSON.stringify(this.displayMessages))
