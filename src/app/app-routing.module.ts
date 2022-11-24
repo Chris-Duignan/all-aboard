@@ -32,8 +32,8 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserPageComponent,
-    // canActivate: [AuthGuard],
-    // data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) },
   },
   {
     path: 'createEvent',
@@ -46,7 +46,8 @@ const routes: Routes = [
   { path: 'games', component: GamesPageComponent },
   { path: 'games/:game_id', component: SingleGamePageComponent },
   { path: 'games/:game_id', component: SingleGamePageComponent },
-  { path: 'join-chat', component: JoinChatComponent },
+  { path: 'join-chat', component: JoinChatComponent,  canActivate: [AuthGuard],
+  data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) }, },
   { path: 'chat', component: ChatComponent },
   { path: 'dice', component: DiceComponent },
   { path: 'events/:event_id/addGames', component: AddGamesToEventComponent },
