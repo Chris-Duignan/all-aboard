@@ -4,6 +4,10 @@
   <h3>My Games</h3>
   <br />
   <ul class="gameList">
+    <p *ngIf="user.games[0].game_title === null">
+      Games You Add Will Appear Here
+    </p>
+
     <li
       *ngFor="let game of user.games"
       routerLink="{{ '/games/' + game.game_id }}"
@@ -16,6 +20,8 @@
   <h3>My Events</h3>
   <br />
   <ul class="eventList">
+    <p *ngIf="user.events.length === 0">Events You Attend Will Appear Here</p>
+
     <li
       *ngFor="let event of user.events"
       routerLink="{{ '/events/' + event.event_id }}"
@@ -24,6 +30,7 @@
       <br />
     </li>
   </ul>
+
   <br />
   <button class="formButton" (click)="goToCreateEvent()">
     Create New Event
