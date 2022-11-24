@@ -1,4 +1,6 @@
 .event-card {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   align-items: center;
   width: 90%;
   margin: auto;
@@ -7,6 +9,8 @@
   margin-top: 1em;
   background-color: white;
   padding: 0.5em;
+  background-color: #b8a9c9;
+  box-shadow: 5px 8px 5px 5px #5b9aa0;
 }
 .event-card > h2 {
   margin-right: 1em;
@@ -16,12 +20,12 @@
   max-height: fit-content;
   height: 2em;
   background-color: rgba(0, 0, 0, 0);
-  border: solid blueviolet;
+  border: solid black;
   border-radius: 5px;
   border-width: 1px;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  color: blueviolet;
+  color: black;
 }
 .event-card > button:active {
   color: white;
