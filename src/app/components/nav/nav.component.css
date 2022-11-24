@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .navButton {
     font-size: 10px;
     margin: 0px;
@@ -13,41 +13,163 @@
     padding-top: 15px;
     font-size: 30px;
     background-color: #5b9aa0;
+    cursor: pointer;
+  }
+  .dice:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  .navButton {
+    padding: 5px;
+    flex-wrap: wrap;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .signOut {
+    border: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #622569;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    max-width: 50px;
+    cursor: pointer;
   }
 }
 
-.navButton {
-  padding: 5px;
-  flex-wrap: wrap;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 17px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  border-radius: 10px;
-  border: none;
-  margin-bottom: 35px;
-  margin-top: 15px;
-}
+/* Large Screens */
+@media screen and (min-width: 1024px) {
+  .navButton {
+    padding: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-}
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .dice {
+    max-height: 20px;
+    border-color: #1fe0;
+    font-size: 50px;
+    background-color: #5b9aa0;
+    cursor: pointer;
+  }
+  .dice:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
 
-.signOut {
-  justify-self: flex-end;
-  flex-wrap: wrap;
-  border: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 10px;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #622569;
-  color: white;
-  margin-top: 15px;
-  margin-bottom: 35px;
-  max-width: 50px;
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  .signOut {
+    border: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #622569;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    cursor: pointer;
+  }
 }

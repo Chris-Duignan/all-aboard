@@ -1,9 +1,10 @@
 <div class="diceRoller">
-    <div class="grid">
-        <div class="grid-item" *ngFor="let diceValue of diceValues">
-            <!-- <span>{{ diceValue.value }}</span> -->
-            <img src={{diceValue.imagePath}}/>
-        </div>
+  <div class="grid">
+    <div class="grid-item" *ngFor="let diceValue of diceValues">
+      <img src="{{ diceValue.imagePath }}" />
     </div>
-    <button type="button" id="roll-button" (click)="rollDice()">Roll Dice!</button>
+  </div>
+  <button type="button" id="roll-button" (click)="rollDice()">
+    Roll Dice!
+  </button>
 </div>
