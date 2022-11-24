@@ -24,9 +24,9 @@ export class UserPageComponent implements OnInit {
     if (this.user.uid === '') {
       if (this.authService.isLoggedIn$) {
         this.authService.getCurrentUser();
-        while (this.user.uid === '') {
+        setTimeout(() => {
           this.getUser();
-        }
+        }, 500);
       }
     }
   }
