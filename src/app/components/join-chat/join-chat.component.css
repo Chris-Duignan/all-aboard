@@ -1,4 +1,17 @@
-.join-chat{
-    min-height:33em;
-    border: 10px solid #622569;
+.join-chat {
+  min-height: 33em;
+  border: 10px solid #622569;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+.noChatsYet {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #622569;
+  text-align: center;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
