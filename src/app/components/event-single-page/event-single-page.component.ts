@@ -15,6 +15,7 @@ export class EventSinglePageComponent implements OnInit {
   meet: any;
   formatDate = '';
   user_id: any;
+  games: any;
 
   @Input() Meet: any;
   constructor(
@@ -33,6 +34,9 @@ export class EventSinglePageComponent implements OnInit {
     this.eventsService.getEventById(event_id).subscribe((meet) => {
       this.meet = meet;
       this.formatDate = formatDate(this.meet.date);
+      this.games = this.meet.games.map((game: string) => {
+        return this.formatGameName(game);
+      });
     });
   }
 
@@ -47,5 +51,17 @@ export class EventSinglePageComponent implements OnInit {
           organiser: false,
         });
       });
+  }
+  formatGameName(gameName: string) {
+    return gameName
+      .split('-')
+      .map((word: string) => {
+        if (word[0]) {
+          return word[0].toUpperCase() + word.slice(1);
+        } else {
+          return '-';
+        }
+      })
+      .join(' ');
   }
 }
