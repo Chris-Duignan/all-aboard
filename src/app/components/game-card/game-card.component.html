@@ -1,8 +1,8 @@
 <div class="gameContainer">
   <li class="gamesCard" routerLink="{{ gamePageLink }}">
     <img max-width="100" src="{{ game.image_url }}" />
+    <h3 class="gameTitle">{{ formattedName }}</h3>
     <div class="gameBrief">
-      <h3 class="gameTitle">{{ formattedName }}</h3>
       <p class="gameDesc">{{ shortDescription }}</p>
       <p>Players: {{ game.min_players }} - {{ game.max_players }}</p>
     </div>

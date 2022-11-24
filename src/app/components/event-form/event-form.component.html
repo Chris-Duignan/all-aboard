@@ -49,15 +49,19 @@
         name="start_time"
       />
       <br />
-      <label for="duration">Duration In Mins <sup>(optional)</sup></label>
+      <label for="duration"
+        >Duration In Mins<br />
+        <sup>(optional)</sup></label
+      >
       <input
+        class="number"
         type="number"
         id="number"
         [(ngModel)]="model.duration"
         name="duration"
       />
       <br />
-      <fieldset>
+      <fieldset class="fieldset1">
         <legend>Teacher Available</legend>
         <label>
           Yes
@@ -107,7 +111,7 @@
           />
         </label>
       </fieldset>
-      <br /><br />
+      <br />
       <button type="submit" [disabled]="!eventForm.form.valid">
         Add Event
       </button>
