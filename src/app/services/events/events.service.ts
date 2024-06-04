@@ -10,7 +10,7 @@ import { Meet } from '../../interfaces/event';
   providedIn: 'root',
 })
 export class EventsService {
-  private eventsUrl = 'https://all-aboard.cyclic.app/api/events';
+  private eventsUrl = 'https://all-aboard-be.onrender.com/api/events';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -56,7 +56,7 @@ export class EventsService {
 
   getEventsByUserId(user_id: number): Observable<Event[]> {
     return this.http
-      .get(`https://all-aboard.cyclic.app/api/users/${user_id}/events`)
+      .get(`https://all-aboard-be.onrender.com/api/users/${user_id}/events`)
       .pipe(
         map((response: any) => {
           return response.events;

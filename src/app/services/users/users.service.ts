@@ -11,7 +11,7 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   getUser(user_id: number): Observable<User> {
-    let userUrl = `https://all-aboard.cyclic.app/api/users/${user_id}`;
+    let userUrl = `https://all-aboard-be.onrender.com/api/users/${user_id}`;
     return this.http.get<any>(userUrl).pipe(
       map((response: any) => {
         return response.user;
@@ -21,7 +21,9 @@ export class UsersService {
 
   getUserIdByUID(uid: string): Observable<number> {
     return this.http
-      .get<number>(`https://all-aboard.cyclic.app/api/users/uidLookup/${uid}`)
+      .get<number>(
+        `https://all-aboard-be.onrender.com/api/users/uidLookup/${uid}`
+      )
       .pipe(
         map((response: any) => {
           return response.user_id;

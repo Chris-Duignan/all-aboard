@@ -12,8 +12,8 @@ import { Game } from 'src/app/interfaces/game';
   providedIn: 'root',
 })
 export class GamesService {
-  private gamesUrl = 'https://all-aboard.cyclic.app/api/games';
-  private usersUrl = 'https://all-aboard.cyclic.app/api/users';
+  private gamesUrl = 'https://all-aboard-be.onrender.com/api/games';
+  private usersUrl = 'https://all-aboard-be.onrender.com/api/users';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
